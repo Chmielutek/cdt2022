@@ -47,32 +47,32 @@ List<ClassesBlock> SATURDAY_CLASSES = [
   ClassesBlock(
       day: Day.SATURDAY,
       startingHour: 10,
-      classes: SAT_FIRST
+      classesIds: SAT_FIRST
   ),
   ClassesBlock(
       day: Day.SATURDAY,
       startingHour: 11,
-      classes: SAT_SECOND
+      classesIds: SAT_SECOND
   ),
   ClassesBlock(
       day: Day.SATURDAY,
       startingHour: 12,
-      classes: SAT_THIRD
+      classesIds: SAT_THIRD
   ),
   ClassesBlock(
       day: Day.SATURDAY,
       startingHour: 14,
-      classes: SAT_FOURTH
+      classesIds: SAT_FOURTH
   ),
   ClassesBlock(
       day: Day.SATURDAY,
       startingHour: 15,
-      classes: SAT_FIFTH
+      classesIds: SAT_FIFTH
   ),
   ClassesBlock(
       day: Day.SATURDAY,
       startingHour: 16,
-      classes: SAT_SIXTH
+      classesIds: SAT_SIXTH
   ),
 ];
 
@@ -81,36 +81,82 @@ List<ClassesBlock> SUNDAY_CLASSES = [
   ClassesBlock(
       day: Day.SUNDAY,
       startingHour: 10,
-      classes: SAT_FIRST
+      classesIds: SAT_FIRST
   ),
   ClassesBlock(
       day: Day.SUNDAY,
       startingHour: 11,
-      classes: SAT_FIRST
+      classesIds: SAT_FIRST
   ),
   ClassesBlock(
       day: Day.SUNDAY,
       startingHour: 12,
-      classes: SAT_FIRST
+      classesIds: SAT_FIRST
   ),
   ClassesBlock(
       day: Day.SUNDAY,
       startingHour: 14,
-      classes: SAT_FIRST
+      classesIds: SAT_FIRST
   ),
   ClassesBlock(
       day: Day.SUNDAY,
       startingHour: 15,
-      classes: SAT_FIRST
+      classesIds: SAT_FIRST
   ),
   ClassesBlock(
       day: Day.SUNDAY,
       startingHour: 16,
-      classes: SAT_FIRST
+      classesIds: SAT_FIRST
   ),
 ];
 
-List<DanceClass> SAT_FIRST = [
+List<int> SAT_FIRST = [1, 2, 3, 4];
+
+List<int> SAT_SECOND = [1, 2, 3, 4
+
+];
+
+List<int> SAT_THIRD = [1, 2, 3, 4
+
+];
+
+List<int> SAT_FOURTH = [1, 2, 3, 4
+
+];
+
+List<int> SAT_FIFTH = [1, 2, 3, 4
+];
+
+List<int> SAT_SIXTH = [1, 2, 3, 4
+
+];
+
+
+List<int> SUN_FIRST = [1, 2, 3, 4
+
+];
+
+List<int> SUN_SECOND = [
+
+];
+
+List<int> SUN_THIRD = [
+
+];
+
+List<int> SUN_FOURTH = [
+
+];
+
+List<int> SUN_FIFTH = [
+
+];
+
+List<int> SUN_SIXTH = [
+
+];
+
+List<DanceClass> DANCE_CLASSES = [
   DanceClass(
       id: 1,
       name: 'Salsa',
@@ -139,49 +185,4 @@ List<DanceClass> SAT_FIRST = [
       difficulty: Difficulty.ADVANCED,
       classRoom: ClassRoom.D
   ),
-];
-
-List<DanceClass> SAT_SECOND = [
-
-];
-
-List<DanceClass> SAT_THIRD = [
-
-];
-
-List<DanceClass> SAT_FOURTH = [
-
-];
-
-List<DanceClass> SAT_FIFTH = [
-
-];
-
-List<DanceClass> SAT_SIXTH = [
-
-];
-
-
-List<DanceClass> SUN_FIRST = [
-
-];
-
-List<DanceClass> SUN_SECOND = [
-
-];
-
-List<DanceClass> SUN_THIRD = [
-
-];
-
-List<DanceClass> SUN_FOURTH = [
-
-];
-
-List<DanceClass> SUN_FIFTH = [
-
-];
-
-List<DanceClass> SUN_SIXTH = [
-
 ];

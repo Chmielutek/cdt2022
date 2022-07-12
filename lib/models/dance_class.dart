@@ -1,11 +1,9 @@
-import 'package:flutter/material.dart';
-
 class ClassesBlock {
   Day day;
   int startingHour;
-  List<DanceClass> classes;
+  List<int> classesIds;
 
-  ClassesBlock({required this.day, required this.startingHour, required this.classes});
+  ClassesBlock({required this.day, required this.startingHour, required this.classesIds});
 }
 
 class DanceClass {

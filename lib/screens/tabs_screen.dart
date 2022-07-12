@@ -5,8 +5,6 @@ import 'locations_screen.dart';
 import 'classes_screen.dart';
 
 class TabsScreen extends StatefulWidget {
-  const TabsScreen({Key? key}) : super(key: key);
-
   @override
   State<TabsScreen> createState() => _TabsScreenState();
 }

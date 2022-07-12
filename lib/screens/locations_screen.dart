@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import '../widgets/main_drawer.dart';
 
 class LocationsScreen extends StatelessWidget {
-  static String routeName = '/locations';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

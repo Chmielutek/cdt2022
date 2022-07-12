@@ -43,13 +43,6 @@ class MainDrawer extends StatelessWidget {
             height: 20,
           ),
           buildListTile(
-              'Classes',
-              Icons.whatshot,
-                  () {
-                Navigator.of(context).pushReplacementNamed(ClassesScreen.routeName);
-              }
-          ),
-          buildListTile(
               'About Us',
               Icons.settings,
                   () {
