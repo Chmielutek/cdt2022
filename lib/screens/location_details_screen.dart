@@ -17,21 +17,62 @@ class LocationDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final locationId = ModalRoute.of(context)?.settings.arguments;
     final location = LOCATIONS.firstWhere((location) => location.id == locationId);
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Text(location.name),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Card(
-            color: Colors.amberAccent,
-            elevation: 4,
-            shadowColor: Colors.redAccent,
-            child: Container(
-              height: 120,
-              width: double.infinity,
-              child: Image.asset('assets/images/a2.png'),
-            ),
+          Stack(
+            children: [
+              Container(
+                height: size.height * 0.3,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/a2_street_view.png'),
+                        fit: BoxFit.cover
+                    )
+                ),
+              ),
+              Positioned.fill(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topCenter,
+                        colors: [
+                          Colors.black.withOpacity(0.6),
+                          Colors.transparent
+                        ]
+                      )
+                    ),
+                  )
+              ),
+              Positioned(
+                bottom: 0,
+                right: 0,
+                child: Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).primaryColor,
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: Text(location.venue,
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ]
           ),
           Column(
             children: [
@@ -42,23 +83,24 @@ class LocationDetailsScreen extends StatelessWidget {
                 Text('If party - start time')
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              width: double.infinity,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(border: Border.all(width: 1, color: Colors.grey)),
-              child: Image.asset('assets/images/a2_location_preview.png'),
-            ),
+          Column(
+            children: [
+              Container(
+                height: size.height * 0.4,
+                width: double.infinity,
+                alignment: Alignment.center,
+                child: Image.asset('assets/images/a2_location_preview.png'),
+              ),
+              Center(
+                child: FlatButton.icon(
+                  onPressed: () => _launchGoogleMap(location),
+                  icon: Icon(Icons.map),
+                  label: Text('View in Google Maps'),
+                  textColor: Colors.black87,
+                ),
+              )
+            ],
           ),
-          Center(
-            child: FlatButton.icon(
-              onPressed: () => _launchGoogleMap(location),
-              icon: Icon(Icons.map),
-              label: Text('View in Google Maps'),
-              textColor: Colors.black87,
-            ),
-          )
         ],
       ),
     );
