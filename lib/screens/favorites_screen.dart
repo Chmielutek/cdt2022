@@ -57,7 +57,7 @@ class FavoriteSchedule extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Container(
-        height: size.height,
+        height: size.height * 0.7,
         child: ListView(
           children: [
             for (int i = 0; i < classDay.length; i++)
@@ -75,51 +75,59 @@ class FavoriteClassBlock extends StatelessWidget {
 
   FavoriteClassBlock(this.danceClassIds, this.startingHour);
 
+  DanceClass? getDanceClass(List<int> danceClassIds) {
+    if (danceClassIds == null || danceClassIds.length < 1) {
+      return null;
+    }
+    var danceClassIndex = DANCE_CLASSES.indexWhere((danceClass) => danceClass.id == danceClassIds[0]);
+    if (danceClassIndex > -1) {
+      return DANCE_CLASSES.elementAt(danceClassIndex);
+    } else {
+      return null;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    DanceClass danceClass = DANCE_CLASSES.firstWhere((danceClass) => danceClass.id == danceClassIds[0]);
+    DanceClass? danceClass = getDanceClass(danceClassIds);
     Size size = MediaQuery.of(context).size;
-    return Container(
-      width: size.width/3,
-      child: Column(
-        children: [
-          Container(
-            height: 20,
-            margin: EdgeInsets.all(10),
-            child: Text(startingHour.toString()),
-          ),
-          Container(
-              height: 70,
-              width: double.infinity,
-              child: Center(
-                child: danceClassIds.length > 0 ?
-                Card(
-                  color: Colors.redAccent,
-                  child: Row(
-                    children: [
-                      Column(
-                        children: [
-                          Text(danceClass.name),
-                          Text(danceClass.instructors)
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text(danceClass.difficulty.toString()),
-                          Text(danceClass.classRoom.toString())
-                        ],
-                      )
-                    ]
-                  ),
-                ) :
-                Text('No favorites added to this class block'),
-              )
-          ),
-          SizedBox(
-            height: 5,
-          )
-        ],
-      ),
+    return Column(
+      children: [
+        Container(
+            height: size.height/5,
+            width: double.infinity,
+            child: Center(
+              child: danceClass != null ?
+              Card(
+                color: Colors.redAccent,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(startingHour.toString()),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(danceClass.name),
+                        Text(danceClass.instructors)
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(danceClass.difficulty.toString()),
+                        Text(danceClass.classRoom.toString())
+                      ],
+                    )
+                  ]
+                ),
+              ) :
+              Text('No favorites added to this class block'),
+            )
+        ),
+        SizedBox(
+          height: 5,
+        )
+      ],
     );
   }
 }

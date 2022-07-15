@@ -1,8 +1,10 @@
+import 'package:calle_de_timberos/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'models/favorites.dart';
 import 'screens/about_us_screen.dart';
+import 'screens/location_details_screen.dart';
 import 'screens/tabs_screen.dart';
 
 void main() {
@@ -29,9 +31,11 @@ class _MyAppState extends State<MyApp> {
           focusColor: Colors.redAccent
         ),
         initialRoute: '/',
+        home: SplashScreen(2, TabsScreen.routeName),
         routes: {
-          '/': (ctx) => TabsScreen(),
-          AboutUsScreen.routeName: (ctx) => AboutUsScreen()
+          TabsScreen.routeName: (ctx) => TabsScreen(),
+          AboutUsScreen.routeName: (ctx) => AboutUsScreen(),
+          LocationDetailsScreen.routeName: (ctx) => LocationDetailsScreen()
         },
       ),
     );

@@ -5,6 +5,8 @@ import 'locations_screen.dart';
 import 'classes_screen.dart';
 
 class TabsScreen extends StatefulWidget {
+  static String routeName = '/tabs';
+
   @override
   State<TabsScreen> createState() => _TabsScreenState();
 }
@@ -42,7 +44,6 @@ class _TabsScreenState extends State<TabsScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text.rich(TextSpan(
@@ -60,7 +61,7 @@ class _TabsScreenState extends State<TabsScreen> {
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0,
         onTap: _selectPage,
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Colors.grey,
         unselectedItemColor: Colors.white,
         selectedItemColor: Theme.of(context).focusColor,
         currentIndex: _selectedPageIndex,
