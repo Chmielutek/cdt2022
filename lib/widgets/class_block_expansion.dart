@@ -1,7 +1,7 @@
-import 'package:calle_de_timberos/calle_data.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../calle_data.dart';
 import '../models/dance_class.dart';
 import '../models/favorites.dart';
 

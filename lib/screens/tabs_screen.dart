@@ -1,8 +1,8 @@
-import 'package:calle_de_timberos/screens/favorites_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'locations_screen.dart';
 import 'classes_screen.dart';
+import '../screens/favorites_screen.dart';
 
 class TabsScreen extends StatefulWidget {
   static String routeName = '/tabs';

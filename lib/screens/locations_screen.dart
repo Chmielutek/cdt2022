@@ -1,9 +1,9 @@
-import 'package:calle_de_timberos/calle_data.dart';
-import 'package:calle_de_timberos/models/location.dart';
-import 'package:calle_de_timberos/screens/location_details_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/main_drawer.dart';
+import '../calle_data.dart';
+import '../models/location.dart';
+import '../screens/location_details_screen.dart';
 
 class LocationsScreen extends StatelessWidget {
   @override

@@ -1,8 +1,10 @@
-import 'package:calle_de_timberos/calle_data.dart';
-import 'package:calle_de_timberos/models/location.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:maps_launcher/maps_launcher.dart';
+import 'package:flutter/services.dart';
+
+import '../calle_data.dart';
+import '../models/location.dart';
 
 class LocationDetailsScreen extends StatelessWidget {
   static String routeName = '/about-us';
@@ -33,6 +35,17 @@ class LocationDetailsAddress extends StatelessWidget {
   final Location location;
 
   LocationDetailsAddress(this.size, this.location);
+
+  void _copyToClipboard(BuildContext context) {
+    Clipboard.setData(ClipboardData(text: location.address)).then(
+            (_) => {
+          ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                duration: Duration(seconds: 1),
+                content: Text('Address has been copied to clipboard', textAlign: TextAlign.center,))
+          )
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,17 +93,10 @@ class LocationDetailsAddress extends StatelessWidget {
           Container(
             width: size.width * 0.2,
             child: IconButton(
-              onPressed: () {},
+              onPressed: () => _copyToClipboard(context),
               icon: Icon(Icons.copy),
             ),
           )
-          // Column(children: [
-          //   Text(location.venue),
-          //   Text(location.address),
-          //   Text(location.address),
-          //   if (location.startTime != null)
-          //     Text('If party - start time')
-          // ],),
         ],
       ),
     );

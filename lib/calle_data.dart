@@ -1,5 +1,5 @@
-import 'package:calle_de_timberos/models/dance_class.dart';
-import 'package:calle_de_timberos/models/location.dart';
+import '../models/dance_class.dart';
+import '../models/location.dart';
 
 List<Location> LOCATIONS = [
   Location(

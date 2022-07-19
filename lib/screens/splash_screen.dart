@@ -1,5 +1,6 @@
-import 'package:calle_de_timberos/screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
+
+import '../screens/tabs_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   int duration = 0;
