@@ -17,6 +17,7 @@ class ClassesScreen extends StatelessWidget {
               length: 2,
               child: Scaffold(
                 appBar: AppBar(
+                  backgroundColor: Theme.of(context).backgroundColor,
                   toolbarHeight: 0,
                   bottom: TabBar(
                     tabs: [
