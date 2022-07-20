@@ -24,6 +24,7 @@ class _MyAppState extends State<MyApp> {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          fontFamily: 'Lato',
           primarySwatch: Colors.blue,
           accentColor: Colors.amberAccent,
           // backgroundColor: Color(4282434815),
