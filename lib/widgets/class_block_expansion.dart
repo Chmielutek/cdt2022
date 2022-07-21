@@ -124,6 +124,16 @@ class _DanceClassCardState extends State<DanceClassCard> {
     return '';
   }
 
+  Color getColorBasedOnDifficulty(Difficulty difficulty) {
+    if (difficulty == Difficulty.ADVANCED) {
+      return Colors.red;
+    } else if (difficulty == Difficulty.INTERMEDIATE) {
+      return Colors.blue;
+    } else {
+      return Colors.green;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     var favorites = Provider.of<Favorites>(context, listen: false);
@@ -134,38 +144,46 @@ class _DanceClassCardState extends State<DanceClassCard> {
       child: Card(
         elevation: 4,
         margin: EdgeInsets.all(5),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Container(
-              width: columnWidth,
-              child: Column(
-                children: [
-                  Text(widget.danceClass.name),
-                  Text(widget.danceClass.instructors),
-                ],
+        child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [getColorBasedOnDifficulty(widget.danceClass.difficulty), Colors.white],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight)
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Container(
+                width: columnWidth,
+                child: Column(
+                  children: [
+                    Text(widget.danceClass.name),
+                    Text(widget.danceClass.instructors),
+                  ],
+                ),
               ),
-            ),
-            Container(
-              width: columnWidth,
-              child: Column(
-                children: [
-                  Text(formatDifficulty(widget.danceClass.difficulty)),
-                  Text(formatClassRoom(widget.danceClass.classRoom)),
-                ],
+              Container(
+                width: columnWidth,
+                child: Column(
+                  children: [
+                    Text(formatDifficulty(widget.danceClass.difficulty)),
+                    Text(formatClassRoom(widget.danceClass.classRoom)),
+                  ],
+                ),
               ),
-            ),
-            Container(
-              width: columnWidth / 3,
-              child: IconButton(
-                  onPressed: () {
-                    favorites.toggleFavorite(widget.danceClass.id);
-                    setState(() {});
-                  },
-                  icon: widget.isFavorite == true ? Icon(Icons.favorite) : Icon(Icons.favorite_border)
-              ),
-            )
-          ],
+              Container(
+                width: columnWidth / 3,
+                child: IconButton(
+                    onPressed: () {
+                      favorites.toggleFavorite(widget.danceClass.id);
+                      setState(() {});
+                    },
+                    icon: widget.isFavorite == true ? Icon(Icons.favorite) : Icon(Icons.favorite_border)
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
