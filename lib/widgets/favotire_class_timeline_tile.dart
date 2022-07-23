@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:timeline_tile/timeline_tile.dart';
+import 'package:flutter_gen/gen_l10n/app_locatizations.dart';
 
 import '../calle_data.dart';
 import '../models/dance_class.dart';
@@ -24,31 +25,31 @@ class FavoriteClassTimelineTile extends StatelessWidget {
     }
   }
 
-  String formatDifficulty(Difficulty difficulty) {
-    if (difficulty == Difficulty.OPEN) {
-      return 'OPEN';
-    }
-    if (difficulty == Difficulty.INTERMEDIATE) {
-      return 'INTERMEDIATE';
-    }
-    if (difficulty == Difficulty.ADVANCED) {
-      return 'ADVANCED';
-    }
-    return '';
-  }
+  // String formatDifficulty(Difficulty difficulty) {
+  //   if (difficulty == Difficulty.OPEN) {
+  //     return AppLocalizations.of(context)?.open as String;
+  //   }
+  //   if (difficulty == Difficulty.INTERMEDIATE) {
+  //     return AppLocalizations.of(context)?.intermediate as String;
+  //   }
+  //   if (difficulty == Difficulty.ADVANCED) {
+  //     return AppLocalizations.of(context)?.advanced as String;
+  //   }
+  //   return '';
+  // }
 
-  String formatClassRoom(ClassRoom classRoom) {
+  String formatClassRoom(BuildContext context, ClassRoom classRoom) {
     if (classRoom == ClassRoom.A) {
-      return 'Classroom A';
+      return '${AppLocalizations.of(context)?.classroom} A';
     }
     if (classRoom == ClassRoom.B) {
-      return 'Classroom B';
+      return '${AppLocalizations.of(context)?.classroom} B';
     }
     if (classRoom == ClassRoom.C) {
-      return 'Classroom C';
+      return '${AppLocalizations.of(context)?.classroom} C';
     }
     if (classRoom == ClassRoom.D) {
-      return 'Classroom D';
+      return '${AppLocalizations.of(context)?.classroom} D';
     }
     return '';
   }
@@ -94,7 +95,7 @@ class FavoriteClassTimelineTile extends StatelessWidget {
                             Text(danceClass.instructors)
                           ],
                         ),
-                        Text(formatClassRoom(danceClass.classRoom))
+                        Text(formatClassRoom(context, danceClass.classRoom))
                       ]
                   ),
                 ),

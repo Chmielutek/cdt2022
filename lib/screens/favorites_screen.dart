@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_locatizations.dart';
 
 import '../calle_data.dart';
 import '../models/dance_class.dart';
@@ -10,7 +11,7 @@ class FavoritesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: Provider.of<Favorites>(context).fetchAndSetFavorites(),
+      future: Provider.of<Favorites>(context, listen: false).fetchAndSetFavorites(),
       builder: (ctx, snapshot) => snapshot.connectionState == ConnectionState.waiting ?
       const Center(child: CircularProgressIndicator()) :
       Consumer<Favorites>(
@@ -25,8 +26,8 @@ class FavoritesScreen extends StatelessWidget {
                     backgroundColor: Theme.of(context).backgroundColor,
                     bottom: TabBar(
                       tabs: [
-                        Tab(text: 'Saturday',),
-                        Tab(text: 'Sunday',)
+                        Tab(text: AppLocalizations.of(context)?.saturday,),
+                        Tab(text: AppLocalizations.of(context)?.sunday,)
                       ],
                     ),
                   ),
@@ -87,8 +88,8 @@ class NoFavoritesFound extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('No favorites added yet!'),
-            Text('Go to classes and choose something you like to create your dream schedule!', softWrap: true,)
+            Text(AppLocalizations.of(context)?.nofavsheader as String),
+            Text(AppLocalizations.of(context)?.nofavsbody as String, softWrap: true,)
           ],
         )
         ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_locatizations.dart';
 
 import 'models/favorites.dart';
 import 'screens/about_us_screen.dart';
@@ -14,14 +16,37 @@ void main() {
 class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
+
+  static _MyAppState? of(BuildContext context) => context.findAncestorStateOfType<_MyAppState>();
 }
 
 class _MyAppState extends State<MyApp> {
+  Locale _locale = Locale('en', '');
+
+  String getLocaleLanguageTag() {
+    return _locale.languageCode;
+  }
+
+  void setLocale(Locale value) {
+    setState(() {
+      _locale = value;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider.value(
       value: Favorites(),
       child: MaterialApp(
+        supportedLocales: const [
+          Locale('pl', ''),
+          Locale('en', '')
+        ],
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+          AppLocalizations.delegate
+        ],
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Lato',
@@ -34,6 +59,7 @@ class _MyAppState extends State<MyApp> {
           focusColor: Colors.redAccent
         ),
         initialRoute: '/',
+        locale: _locale,
         home: SplashScreen(2, TabsScreen.routeName),
         routes: {
           TabsScreen.routeName: (ctx) => TabsScreen(),

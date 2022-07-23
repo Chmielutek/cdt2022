@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_locatizations.dart';
 
 import '../models/favorites.dart';
 import '../widgets/class_block_expansion.dart';
@@ -21,8 +22,8 @@ class ClassesScreen extends StatelessWidget {
                   toolbarHeight: 0,
                   bottom: TabBar(
                     tabs: [
-                      Tab(text: 'Saturday',),
-                      Tab(text: 'Sunday',)
+                      Tab(text: AppLocalizations.of(context)?.saturday,),
+                      Tab(text: AppLocalizations.of(context)?.sunday,)
                     ],
                   ),
                 ),

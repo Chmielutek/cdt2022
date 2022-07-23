@@ -1,0 +1,21 @@
+{
+    "language": "Polski",
+    "welcome": "Witamy na ",
+	"classes": "Zajęcia",
+	"locations": "Miejsca",
+    "favorites": "Ulubione",
+    "saturday": "Sobota",
+    "sunday": "Niedziela",
+    "nofavsheader": "Nie masz jeszcze żadnych ulubionych!",
+    "nofavsbody": "Przejdź do zajęć i wybierz ulubione z nich, aby stworzyć swój wymarzony plan dnia!",
+    "classroom": "Sala",
+    "open": "Open",
+    "intermediate": "Średnio-zaawansowane",
+    "advanced": "Zaawansowane",
+    "fridayparty": "Piątkowa Impreza",
+    "fridayadditionalinfo": "Impreza Otwarcia",
+    "satparty": "Sobotnia Impreza",
+    "satadditionalinfo": "Główna Impreza + Koncert",
+    "sunparty": "Niedzielna Impreza",
+    "sunadditionalinfo": "Impreza Pożegnalna"
+}

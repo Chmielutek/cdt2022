@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_locatizations.dart';
 
 import '../calle_data.dart';
 import '../models/dance_class.dart';
@@ -97,29 +98,29 @@ class _DanceClassCardState extends State<DanceClassCard> {
 
   String formatDifficulty(Difficulty difficulty) {
     if (difficulty == Difficulty.OPEN) {
-      return 'OPEN';
+      return AppLocalizations.of(context)?.open as String;
     }
     if (difficulty == Difficulty.INTERMEDIATE) {
-      return 'INTERMEDIATE';
+      return AppLocalizations.of(context)?.intermediate as String;
     }
     if (difficulty == Difficulty.ADVANCED) {
-      return 'ADVANCED';
+      return AppLocalizations.of(context)?.advanced as String;
     }
     return '';
   }
 
   String formatClassRoom(ClassRoom classRoom) {
     if (classRoom == ClassRoom.A) {
-      return 'Classroom A';
+      return '${AppLocalizations.of(context)?.classroom} A';
     }
     if (classRoom == ClassRoom.B) {
-      return 'Classroom B';
+      return '${AppLocalizations.of(context)?.classroom} B';
     }
     if (classRoom == ClassRoom.C) {
-      return 'Classroom C';
+      return '${AppLocalizations.of(context)?.classroom} C';
     }
     if (classRoom == ClassRoom.D) {
-      return 'Classroom D';
+      return '${AppLocalizations.of(context)?.classroom} D';
     }
     return '';
   }

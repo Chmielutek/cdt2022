@@ -49,5 +49,4 @@ class Favorites with ChangeNotifier {
     notifyListeners();
   }
 
-
 }

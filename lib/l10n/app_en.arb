@@ -1,0 +1,78 @@
+{
+    "language": "English",
+    "@language": {
+        "description": "Current language"
+    },
+    "welcome": "Welcome to ",
+    "@welcome": {
+        "description": ""
+    },
+    "classes": "Classes",
+    "@classes": {
+        "description": ""
+    },
+    "locations": "Locations",
+    "@locations": {
+        "description": ""
+    },
+    "favorites": "Favorites",
+    "@favorites": {
+        "description": ""
+    },
+    "saturday": "Saturday",
+    "@saturday": {
+        "description": ""
+    },
+    "sunday": "Sunday",
+    "@sunday": {
+        "description": ""
+    },
+    "nofavsheader": "No favorites added yet!",
+    "@sunday": {
+        "description": ""
+    },
+    "nofavsbody": "Go to classes and choose something you like to create your dream schedule!",
+    "@sunday": {
+        "description": ""
+    },
+    "classroom": "Classroom",
+    "@classroom": {
+        "description": ""
+    },
+    "open": "Open",
+    "@open": {
+        "description": ""
+    },
+    "intermediate": "Intermediate",
+    "@intermediate": {
+        "description": ""
+    },
+    "advanced": "Advanced",
+    "@advanced": {
+        "description": ""
+    },
+    "fridayparty": "Friday Party",
+    "@fridayparty": {
+        "description": ""
+    },
+    "fridayadditionalinfo": "Introductory Party",
+    "@fridayadditionalinfo": {
+        "description": ""
+    },
+    "satparty": "Saturday Party",
+    "@satparty": {
+        "description": ""
+    },
+    "satadditionalinfo": "Main Party + Concert",
+    "@satadditionalinfo": {
+        "description": ""
+    },
+    "sunparty": "Sunday Party",
+    "@sunparty": {
+        "description": ""
+    },
+    "sunadditionalinfo": "Goodbye Party",
+    "@sunadditionalinfo": {
+        "description": ""
+    }
+}
