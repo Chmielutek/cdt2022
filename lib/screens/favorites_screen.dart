@@ -16,7 +16,7 @@ class FavoritesScreen extends StatelessWidget {
       const Center(child: CircularProgressIndicator()) :
       Consumer<Favorites>(
           child: NoFavoritesFound(),
-          builder: (ctx, favorites, ch) => favorites.items.length <= 0 ?
+          builder: (ctx, favorites, ch) => favorites.items.where((fav) => fav.isFavorite == true).toList().isEmpty ?
               ch! :
               DefaultTabController(
                 length: 2,
@@ -51,7 +51,8 @@ class FavoriteSchedule extends StatelessWidget {
   FavoriteSchedule(this.classDay, this.favorites);
 
   List<int> getFavoritesForClassBlock(ClassesBlock classesBlock, List<Favorite> favorites) {
-    return classesBlock.classesIds.where((danceClassId) => favorites.indexWhere((fav) => fav.danceClassId == danceClassId) > -1).toList();
+    return classesBlock.classesIds.where((danceClassId) => favorites.indexWhere((fav) => fav.danceClassId == danceClassId && fav.isFavorite == true) > -1)
+        .toList();
   }
 
   bool isFirst(int classBlockIndex) {

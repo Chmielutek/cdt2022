@@ -48,5 +48,4 @@ class Favorites with ChangeNotifier {
             )).toList();
     notifyListeners();
   }
-
 }
