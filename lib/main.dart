@@ -54,8 +54,8 @@ class _MyAppState extends State<MyApp> {
           accentColor: Colors.amberAccent,
           // backgroundColor: Color(4282434815),
             // backgroundColor: Colors.white,
-          canvasColor: Theme.of(context).backgroundColor,
-            // canvasColor: Colors.white,
+          // canvasColor: Theme.of(context).backgroundColor,
+            canvasColor: Colors.white,
           focusColor: Colors.redAccent
         ),
         initialRoute: '/',

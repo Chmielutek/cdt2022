@@ -8,8 +8,22 @@ import '../models/favorites.dart';
 import '../widgets/favotire_class_timeline_tile.dart';
 
 class FavoritesScreen extends StatelessWidget {
+
+  TabBar  _getTabBar(BuildContext context) {
+    return TabBar(
+      labelColor: Colors.black,
+      indicatorColor: Colors.blue,
+      overlayColor: MaterialStateProperty.all(Colors.transparent),
+      tabs: [
+        Tab(text: AppLocalizations.of(context)?.saturday,),
+        Tab(text: AppLocalizations.of(context)?.sunday,)
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    TabBar tabBar = _getTabBar(context);
     return FutureBuilder(
       future: Provider.of<Favorites>(context, listen: false).fetchAndSetFavorites(),
       builder: (ctx, snapshot) => snapshot.connectionState == ConnectionState.waiting ?
@@ -24,11 +38,12 @@ class FavoritesScreen extends StatelessWidget {
                   appBar: AppBar(
                     toolbarHeight: 0,
                     backgroundColor: Theme.of(context).backgroundColor,
-                    bottom: TabBar(
-                      tabs: [
-                        Tab(text: AppLocalizations.of(context)?.saturday,),
-                        Tab(text: AppLocalizations.of(context)?.sunday,)
-                      ],
+                    bottom: PreferredSize(
+                      preferredSize: tabBar.preferredSize,
+                      child: ColoredBox(
+                        color: Colors.white,
+                        child: tabBar,
+                      ),
                     ),
                   ),
                   body: TabBarView(

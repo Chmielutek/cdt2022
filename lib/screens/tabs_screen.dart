@@ -44,36 +44,27 @@ class _TabsScreenState extends State<TabsScreen> {
     });
   }
 
-  // Widget createLanguageDropdownValue(String localeLanguageTag) {
-  //   var imageDir = localeLanguageTag == 'en' ? 'assets/images/en_flag.png' : 'assets/images/pl_flag.png';
-  //   return Container(
-  //     height: 24,
-  //     width: 32,
-  //     decoration: BoxDecoration(
-  //         image: DecorationImage(
-  //             image: AssetImage(imageDir),
-  //             fit: BoxFit.cover
-  //         ),
-  //         borderRadius: BorderRadius.all(Radius.circular(2))
-  //     ),
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
-    // Widget languageDropdownValue = createLanguageDropdownValue(MyApp.of(context)!.getLocaleLanguageTag());
     return Scaffold(
       appBar: AppBar(
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: <Color>[Colors.red, Colors.white, Colors.white, Colors.blue]),
+          ),
+        ),
         title: Text.rich(TextSpan(
           children: [
-            TextSpan(text: AppLocalizations.of(context)?.welcome),
+            TextSpan(text: AppLocalizations.of(context)?.welcome, style: TextStyle(color: Colors.black87)),
             TextSpan(text: 'Calle ', style: TextStyle(color: Colors.red)),
-            TextSpan(text: 'De ', style: TextStyle(color: Colors.white)),
+            TextSpan(text: 'De ', style: TextStyle(color: Colors.black87)),
             TextSpan(text: 'Timberos', style: TextStyle(color: Colors.blue))]
         )),
         actions: [
           DropdownButton(
-              // value: languageDropdownValue,
             value: MyApp.of(context)?.getLocaleLanguageTag() as String,
               items: [
                 DropdownMenuItem(
@@ -118,8 +109,8 @@ class _TabsScreenState extends State<TabsScreen> {
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0,
         onTap: _selectPage,
-        backgroundColor: Colors.grey,
-        unselectedItemColor: Colors.white,
+        backgroundColor: Colors.transparent,
+        unselectedItemColor: Colors.grey,
         selectedItemColor: Theme.of(context).focusColor,
         currentIndex: _selectedPageIndex,
         items: [
@@ -140,3 +131,4 @@ class _TabsScreenState extends State<TabsScreen> {
     );
   }
 }
+

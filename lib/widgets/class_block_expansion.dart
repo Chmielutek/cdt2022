@@ -64,7 +64,8 @@ class _ClassBlocksExpansionState extends State<ClassBlocksExpansion> {
             children: [
               for (int i = 0; i < widget.classBlocks.length; i++)
                 ExpansionPanel(
-                    backgroundColor: Theme.of(context).backgroundColor,
+                    canTapOnHeader: true,
+                    backgroundColor: Colors.white,
                     headerBuilder: (_, isExpanded) {
                       return Center(
                         child: Text(_formatStartingHour(widget.classBlocks[i].startingHour)),
