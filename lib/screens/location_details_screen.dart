@@ -67,7 +67,7 @@ class LocationDetailsAddress extends StatelessWidget {
           BoxShadow(
             offset: Offset(0, 10),
             blurRadius: 50,
-            color: Colors.black87.withOpacity(0.5)
+            color: Colors.black87.withOpacity(0.4)
           )
         ]
       ),
@@ -101,6 +101,7 @@ class LocationDetailsAddress extends StatelessWidget {
           Container(
             width: size.width * 0.2,
             child: IconButton(
+              iconSize: 36,
               onPressed: () => _copyToClipboard(context),
               icon: Icon(Icons.copy),
             ),
@@ -140,7 +141,7 @@ class LocationDetailsPicture extends StatelessWidget {
                         begin: Alignment.bottomCenter,
                         end: Alignment.topCenter,
                         colors: [
-                          Colors.black.withOpacity(0.6),
+                          Colors.black.withOpacity(0.1),
                           Colors.transparent
                         ]
                     )

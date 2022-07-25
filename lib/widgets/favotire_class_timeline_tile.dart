@@ -54,6 +54,16 @@ class FavoriteClassTimelineTile extends StatelessWidget {
     return '';
   }
 
+  Color getColorBasedOnDifficulty(Difficulty difficulty) {
+    if (difficulty == Difficulty.ADVANCED) {
+      return Colors.red;
+    } else if (difficulty == Difficulty.INTERMEDIATE) {
+      return Colors.blue;
+    } else {
+      return Colors.green;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     DanceClass? danceClass = getDanceClass(danceClassIds);
@@ -86,21 +96,25 @@ class FavoriteClassTimelineTile extends StatelessWidget {
               child: Container(
                 height: size.height/8,
                 width: size.width * 0.65,
-                child: Card(
-                  color: Colors.redAccent,
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(danceClass.name),
-                            Text(danceClass.instructors)
-                          ],
-                        ),
-                        Text(formatClassRoom(context, danceClass.classRoom))
-                      ]
-                  ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(8)),
+                    gradient: LinearGradient(
+                        colors: [getColorBasedOnDifficulty(danceClass.difficulty), getColorBasedOnDifficulty(danceClass.difficulty).withOpacity(0.2)],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight)
+                ),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(danceClass.name),
+                          Text(danceClass.instructors)
+                        ],
+                      ),
+                      Text(formatClassRoom(context, danceClass.classRoom))
+                    ]
                 ),
               ),
             ) :
