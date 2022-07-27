@@ -60,7 +60,7 @@ class _MyAppState extends State<MyApp> {
         ),
         initialRoute: '/',
         locale: _locale,
-        home: SplashScreen(2, TabsScreen.routeName),
+        home: SplashScreen(3, TabsScreen.routeName),
         routes: {
           TabsScreen.routeName: (ctx) => TabsScreen(),
           AboutUsScreen.routeName: (ctx) => AboutUsScreen(),

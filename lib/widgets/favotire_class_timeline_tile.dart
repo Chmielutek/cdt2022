@@ -87,7 +87,7 @@ class FavoriteClassTimelineTile extends StatelessWidget {
         child: Row(
           children: [
             Container(
-                width: size.width / 5,
+                width: size.width * 0.25,
                 child: FavoriteClassStartingTime(this.startingHour)
             ),
             danceClass != null ?
@@ -95,7 +95,7 @@ class FavoriteClassTimelineTile extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: size.height/8,
-                width: size.width * 0.65,
+                width: size.width * 0.6,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(8)),
                     gradient: LinearGradient(

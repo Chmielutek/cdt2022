@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../screens/tabs_screen.dart';
 
 class SplashScreen extends StatelessWidget {
+  static const String quote = 'If you don\'t like me in Son, \n you don\'t deserve me in Reggeaton';
+  static const String author = 'Caballo Viejo Loco';
   int duration = 0;
   String goToPageNamedRoute;
   
@@ -19,10 +21,27 @@ class SplashScreen extends StatelessWidget {
     
     return Scaffold(
       body: Center(
-        child: Container(
-          height: 300,
-          width: 300,
-          child: Image.asset('assets/images/calle_logo.png'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              height: 300,
+              width: 300,
+              child: Image.asset('assets/images/calle_logo.png'),
+            ),
+            Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(quote, style: TextStyle(
+                    fontSize: 24,
+                    fontStyle: FontStyle.italic
+                  ),),
+                  Text(author,)
+                ],
+              ),
+            )
+          ],
         ),
       )
     );
