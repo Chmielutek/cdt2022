@@ -1,8 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.calle_de_timberos">
+    package="com.chmielpol_software.calle_de_timberos">
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
    <application
-        android:label="calle_de_timberos"
+        android:label="Calle De Timberos 2022"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
