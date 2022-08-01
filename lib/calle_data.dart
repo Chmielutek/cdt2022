@@ -51,7 +51,6 @@ List<Location> LOCATIONS = [
       pictureUrl: 'assets/images/a2.png'
   )
 ];
-// TODO add locations: parties, classes, hotel
 
 List<ClassesBlock> SATURDAY_CLASSES = [
   ClassesBlock(

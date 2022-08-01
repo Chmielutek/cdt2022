@@ -5,7 +5,6 @@ class Location {
   final String additionalInfo;
   final String? startTime;
   final String address;
-  // TODO change to a pin
   final Coordinates coordinates;
   final String pictureUrl;
 

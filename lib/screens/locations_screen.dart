@@ -43,18 +43,37 @@ class LocationCard extends StatelessWidget {
           elevation: 4,
           margin: EdgeInsets.all(10),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
                 height: 80,
                 width: 80,
                 child: Image.asset('assets/images/a2.png'),
               ),
-              Column(
-                children: [
-                  Text(location.name),
-                  Text(location.additionalInfo)
-                ],
-              )
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(location.name,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(location.additionalInfo,
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey
+                          )
+                      )
+                    ],
+                  ),
+                ),
             ],
           ),
         ),

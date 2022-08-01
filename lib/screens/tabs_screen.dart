@@ -64,42 +64,7 @@ class _TabsScreenState extends State<TabsScreen> {
             TextSpan(text: 'Timberos', style: TextStyle(color: Colors.blue))]
         )),
         actions: [
-          DropdownButton(
-            value: MyApp.of(context)?.getLocaleLanguageTag() as String,
-              items: [
-                DropdownMenuItem(
-                    child: Container(
-                      height: 24,
-                      width: 32,
-                      decoration: const BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/images/en_flag.png'),
-                              fit: BoxFit.cover
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(2))
-                      ),
-                    ),
-                  value: 'en',
-                ),
-                DropdownMenuItem(
-                    child: Container(
-                      height: 24,
-                      width: 32,
-                      decoration: const BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/images/pl_flag.png'),
-                              fit: BoxFit.cover
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(2))
-                      ),
-                    ),
-                  value: 'pl',
-                ),
-              ],
-              onChanged: (value) {
-                MyApp.of(context)?.setLocale(Locale(value as String, ''));
-              }
-          )
+          LanguageDropdownButton(),
         ],
         backgroundColor: Theme.of(context).backgroundColor,
         elevation: 0,
@@ -128,6 +93,51 @@ class _TabsScreenState extends State<TabsScreen> {
           )
         ],
       ),
+    );
+  }
+}
+
+class LanguageDropdownButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButton(
+        value: MyApp.of(context)?.getLocaleLanguageTag() as String,
+        alignment: Alignment.center,
+        items: [
+          DropdownMenuItem(
+            child: Container(
+              height: 24,
+              width: 32,
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black87),
+                  image: DecorationImage(
+                      image: AssetImage('assets/images/en_flag.png'),
+                      fit: BoxFit.cover
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(2))
+              ),
+            ),
+            value: 'en',
+          ),
+          DropdownMenuItem(
+            child: Container(
+              height: 24,
+              width: 32,
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black87),
+                  image: DecorationImage(
+                      image: AssetImage('assets/images/pl_flag.png'),
+                      fit: BoxFit.cover
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(2))
+              ),
+            ),
+            value: 'pl',
+          ),
+        ],
+        onChanged: (value) {
+          MyApp.of(context)?.setLocale(Locale(value as String, ''));
+        }
     );
   }
 }
