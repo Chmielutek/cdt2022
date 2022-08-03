@@ -54,31 +54,37 @@ List<Location> LOCATIONS = [
 
 List<ClassesBlock> SATURDAY_CLASSES = [
   ClassesBlock(
+      id: 1,
       day: Day.SATURDAY,
       startingHour: 10,
       classesIds: SAT_FIRST
   ),
   ClassesBlock(
+      id: 2,
       day: Day.SATURDAY,
       startingHour: 11,
       classesIds: SAT_SECOND
   ),
   ClassesBlock(
+      id: 3,
       day: Day.SATURDAY,
       startingHour: 12,
       classesIds: SAT_THIRD
   ),
   ClassesBlock(
+      id: 4,
       day: Day.SATURDAY,
       startingHour: 14,
       classesIds: SAT_FOURTH
   ),
   ClassesBlock(
+      id: 5,
       day: Day.SATURDAY,
       startingHour: 15,
       classesIds: SAT_FIFTH
   ),
   ClassesBlock(
+      id: 6,
       day: Day.SATURDAY,
       startingHour: 16,
       classesIds: SAT_SIXTH
@@ -88,31 +94,37 @@ List<ClassesBlock> SATURDAY_CLASSES = [
 List<ClassesBlock> SUNDAY_CLASSES = [
 
   ClassesBlock(
+      id: 7,
       day: Day.SUNDAY,
       startingHour: 10,
       classesIds: SUN_FIRST
   ),
   ClassesBlock(
+      id: 8,
       day: Day.SUNDAY,
       startingHour: 11,
       classesIds: SUN_SECOND
   ),
   ClassesBlock(
+      id: 9,
       day: Day.SUNDAY,
       startingHour: 12,
       classesIds: SUN_THIRD
   ),
   ClassesBlock(
+      id: 10,
       day: Day.SUNDAY,
       startingHour: 14,
       classesIds: SUN_FOURTH
   ),
   ClassesBlock(
+      id: 11,
       day: Day.SUNDAY,
       startingHour: 15,
       classesIds: SUN_FIFTH
   ),
   ClassesBlock(
+      id: 12,
       day: Day.SUNDAY,
       startingHour: 16,
       classesIds: SUN_SIXTH

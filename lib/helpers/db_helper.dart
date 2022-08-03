@@ -7,9 +7,9 @@ class DBHelper {
     return await sql.openDatabase(
         path.join(dbPath, 'cdt2022.db'),
         onCreate: (db, version) {
-          return db.execute('CREATE TABLE user_favorites(dance_class_id INTEGER PRIMARY KEY, is_favorite INTEGER)');
+          return db.execute('CREATE TABLE user_favorites(dance_class_id INTEGER PRIMARY KEY, classes_block_id INTEGER, is_favorite INTEGER)');
         },
-        version: 2
+        version: 3
     );
   }
 

@@ -55,6 +55,7 @@ class _ClassBlocksExpansionState extends State<ClassBlocksExpansion> {
 
   @override
   Widget build(BuildContext context) {
+    List<int> favoriteBlocksIds = widget.favorites.map((fav) => fav.classesBlockId).toList();
     return SingleChildScrollView(
       child: Container(
         child: ExpansionPanelList(
@@ -67,13 +68,18 @@ class _ClassBlocksExpansionState extends State<ClassBlocksExpansion> {
                     canTapOnHeader: true,
                     backgroundColor: Colors.white,
                     headerBuilder: (_, isExpanded) {
-                      return Center(
-                        child: Text(_formatStartingHour(widget.classBlocks[i].startingHour)),
+                      return Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(_formatStartingHour(widget.classBlocks[i].startingHour)),
+                          if (favoriteBlocksIds.contains(widget.classBlocks[i].id))
+                            Icon(Icons.favorite)
+                        ],
                       );
                     },
                     body: Column(
                         children: widget.classBlocks[i].classesIds
-                            .map((danceClassId) => DanceClassCard(getDanceClassById(danceClassId), isFavorite(danceClassId))).toList()
+                            .map((danceClassId) => DanceClassCard(getDanceClassById(danceClassId), widget.classBlocks[i].id, isFavorite(danceClassId))).toList()
                     ),
                     isExpanded: _isExpanded[i]
                 )
@@ -86,9 +92,10 @@ class _ClassBlocksExpansionState extends State<ClassBlocksExpansion> {
 
 class DanceClassCard extends StatefulWidget {
   DanceClass danceClass;
+  int classBlockId;
   bool isFavorite;
 
-  DanceClassCard(this.danceClass, this.isFavorite);
+  DanceClassCard(this.danceClass, this.classBlockId, this.isFavorite);
 
   @override
   State<DanceClassCard> createState() => _DanceClassCardState();
@@ -178,7 +185,7 @@ class _DanceClassCardState extends State<DanceClassCard> {
                 width: columnWidth / 3,
                 child: IconButton(
                     onPressed: () {
-                      favorites.toggleFavorite(widget.danceClass.id);
+                      favorites.toggleFavorite(widget.danceClass.id, widget.classBlockId);
                       setState(() {});
                     },
                     icon: widget.isFavorite == true ? Icon(Icons.favorite) : Icon(Icons.favorite_border)

@@ -1,9 +1,10 @@
 class ClassesBlock {
+  int id;
   Day day;
   int startingHour;
   List<int> classesIds;
 
-  ClassesBlock({required this.day, required this.startingHour, required this.classesIds});
+  ClassesBlock({required this.id, required this.day, required this.startingHour, required this.classesIds});
 }
 
 class DanceClass {
