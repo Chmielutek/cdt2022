@@ -1,7 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.chmielpol_software.calle_de_timberos">
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
    <application
         android:label="Calle De Timberos 2022"
         android:name="${applicationName}"

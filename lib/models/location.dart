@@ -7,6 +7,8 @@ class Location {
   final String address;
   final Coordinates coordinates;
   final String pictureUrl;
+  final String previewUrl;
+  final String streetViewUrl;
 
   Location(
       {required this.id,
@@ -16,7 +18,9 @@ class Location {
       this.startTime,
       required this.address,
       required this.coordinates,
-      required this.pictureUrl
+      required this.pictureUrl,
+      required this.previewUrl,
+      required this.streetViewUrl
       });
 }
 

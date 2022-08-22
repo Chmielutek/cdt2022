@@ -127,7 +127,7 @@ class LocationDetailsPicture extends StatelessWidget {
             width: double.infinity,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/a2_street_view.png'),
+                    image: AssetImage(location.streetViewUrl),
                     fit: BoxFit.cover
                 ),
                 borderRadius: BorderRadius.only(bottomLeft: Radius.circular(36), bottomRight: Radius.circular(36))
@@ -197,7 +197,7 @@ class LocationDetailsMap extends StatelessWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/a2_location_preview.png'),
+              image: AssetImage(location.previewUrl),
               fit: BoxFit.cover
             ),
             borderRadius: BorderRadius.only(topLeft: Radius.circular(36), topRight: Radius.circular(36))

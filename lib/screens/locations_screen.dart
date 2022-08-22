@@ -48,7 +48,7 @@ class LocationCard extends StatelessWidget {
               Container(
                 height: 80,
                 width: 80,
-                child: Image.asset('assets/images/a2.png'),
+                child: Image.asset(location.pictureUrl),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
