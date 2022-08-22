@@ -33,7 +33,9 @@ class SplashScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text(quote, style: TextStyle(
+                  Text(quote,
+                    textAlign: TextAlign.right,
+                    style: TextStyle(
                     fontSize: 24,
                     fontStyle: FontStyle.italic
                   ),),

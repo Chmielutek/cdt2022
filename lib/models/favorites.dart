@@ -40,12 +40,14 @@ class Favorites with ChangeNotifier {
     notifyListeners();
     DBHelper.insert('user_favorites', {
       'dance_class_id': danceClassId,
+      'classes_block_id': classBlockId,
       'is_favorite': isFavorite
     });
   }
 
   Future<void> fetchAndSetFavorites() async {
     final dataList = await DBHelper.getData('user_favorites');
+    print('dbResponse on getdata: $dataList');
     _favorites = dataList.map(
             (item) => Favorite(
                 danceClassId: item['dance_class_id'],
@@ -72,6 +74,7 @@ class Favorites with ChangeNotifier {
           _favorites.removeAt(indexOfFavorite);
           DBHelper.insert('user_favorites', {
             'dance_class_id': danceClassId,
+            'classes_block_id': classBlockId,
             'is_favorite': isFavorite
           });
         }

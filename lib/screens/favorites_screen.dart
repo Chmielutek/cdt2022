@@ -29,7 +29,7 @@ class FavoritesScreen extends StatelessWidget {
       builder: (ctx, snapshot) => snapshot.connectionState == ConnectionState.waiting ?
       const Center(child: CircularProgressIndicator()) :
       Consumer<Favorites>(
-          child: NoFavoritesFound(),
+          child: const NoFavoritesFound(),
           builder: (ctx, favorites, ch) => favorites.items.where((fav) => fav.isFavorite == true).toList().isEmpty ?
               ch! :
               DefaultTabController(
@@ -96,6 +96,9 @@ class FavoriteSchedule extends StatelessWidget {
 }
 
 class NoFavoritesFound extends StatelessWidget {
+
+  const NoFavoritesFound();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -104,8 +107,14 @@ class NoFavoritesFound extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(AppLocalizations.of(context)?.nofavsheader as String),
-            Text(AppLocalizations.of(context)?.nofavsbody as String, softWrap: true,)
+            Text(
+              AppLocalizations.of(context)?.nofavsheader as String,
+              textAlign: TextAlign.center,
+            ),
+            Text(
+              AppLocalizations.of(context)?.nofavsbody as String, softWrap: true,
+              textAlign: TextAlign.center,
+            )
           ],
         )
         ),

@@ -167,8 +167,14 @@ class _DanceClassCardState extends State<DanceClassCard> {
                 width: columnWidth,
                 child: Column(
                   children: [
-                    Text(widget.danceClass.name),
-                    Text(widget.danceClass.instructors),
+                    Text(
+                      widget.danceClass.name,
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      widget.danceClass.instructors,
+                      textAlign: TextAlign.center,
+                    ),
                   ],
                 ),
               ),
@@ -176,8 +182,14 @@ class _DanceClassCardState extends State<DanceClassCard> {
                 width: columnWidth,
                 child: Column(
                   children: [
-                    Text(formatDifficulty(widget.danceClass.difficulty)),
-                    Text(formatClassRoom(widget.danceClass.classRoom)),
+                    Text(
+                      formatDifficulty(widget.danceClass.difficulty),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      formatClassRoom(widget.danceClass.classRoom),
+                      textAlign: TextAlign.center,
+                    ),
                   ],
                 ),
               ),
