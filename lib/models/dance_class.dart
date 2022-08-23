@@ -1,20 +1,20 @@
 class ClassesBlock {
-  int id;
-  Day day;
-  int startingHour;
-  List<int> classesIds;
+  final int id;
+  final Day day;
+  final int startingHour;
+  final List<int> classesIds;
 
-  ClassesBlock({required this.id, required this.day, required this.startingHour, required this.classesIds});
+  const ClassesBlock({required this.id, required this.day, required this.startingHour, required this.classesIds});
 }
 
 class DanceClass {
-  int id;
-  String name;
-  String instructors;
-  Difficulty difficulty;
-  ClassRoom classRoom;
+  final int id;
+  final String name;
+  final String instructors;
+  final Difficulty difficulty;
+  final ClassRoom classRoom;
 
-  DanceClass({required this.id, required this.name, required this.instructors, required this.difficulty, required this.classRoom});
+  const DanceClass({required this.id, required this.name, required this.instructors, required this.difficulty, required this.classRoom});
 }
 
 enum Difficulty {

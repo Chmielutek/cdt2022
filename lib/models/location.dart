@@ -10,7 +10,7 @@ class Location {
   final String previewUrl;
   final String streetViewUrl;
 
-  Location(
+  const Location(
       {required this.id,
       required this.name,
       required this.venue,
@@ -28,5 +28,5 @@ class Coordinates {
   final double latitude;
   final double longitude;
 
-  Coordinates(this.latitude, this.longitude);
+  const Coordinates(this.latitude, this.longitude);
 }

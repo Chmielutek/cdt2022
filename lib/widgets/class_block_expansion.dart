@@ -55,7 +55,7 @@ class _ClassBlocksExpansionState extends State<ClassBlocksExpansion> {
 
   @override
   Widget build(BuildContext context) {
-    List<int> favoriteBlocksIds = widget.favorites.map((fav) => fav.classesBlockId).toList();
+    List<int> favoriteBlocksIds = widget.favorites.where((fav) => fav.isFavorite).map((fav) => fav.classesBlockId).toList();
     return SingleChildScrollView(
       child: Container(
         child: ExpansionPanelList(

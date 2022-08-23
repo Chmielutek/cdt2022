@@ -1,7 +1,7 @@
 import '../models/dance_class.dart';
 import '../models/location.dart';
 
-List<Location> LOCATIONS = [
+List<Location> LOCATIONS = const [
   Location(
       id: '1',
       name: 'Friday Party',
@@ -62,7 +62,7 @@ List<Location> LOCATIONS = [
   )
 ];
 
-List<ClassesBlock> SATURDAY_CLASSES = [
+List<ClassesBlock> SATURDAY_CLASSES = const [
   ClassesBlock(
       id: 1,
       day: Day.SATURDAY,
@@ -101,7 +101,7 @@ List<ClassesBlock> SATURDAY_CLASSES = [
   ),
 ];
 
-List<ClassesBlock> SUNDAY_CLASSES = [
+List<ClassesBlock> SUNDAY_CLASSES = const [
 
   ClassesBlock(
       id: 7,
@@ -141,32 +141,32 @@ List<ClassesBlock> SUNDAY_CLASSES = [
   ),
 ];
 
-List<int> SAT_FIRST = [1, 2, 3, 4];
+const List<int> SAT_FIRST = [1, 2, 3, 4];
 
-List<int> SAT_SECOND = [5,6,7,8];
+const List<int> SAT_SECOND = [5,6,7,8];
 
-List<int> SAT_THIRD = [9,10,11,12];
+const List<int> SAT_THIRD = [9,10,11,12];
 
-List<int> SAT_FOURTH = [13,14,15,16];
+const List<int> SAT_FOURTH = [13,14,15,16];
 
-List<int> SAT_FIFTH = [17,18,19,20];
+const List<int> SAT_FIFTH = [17,18,19,20];
 
-List<int> SAT_SIXTH = [21,22,23,24];
+const List<int> SAT_SIXTH = [21,22,23,24];
 
 
-List<int> SUN_FIRST = [25,26,27,28];
+const List<int> SUN_FIRST = [25,26,27,28];
 
-List<int> SUN_SECOND = [29,30,31,32];
+const List<int> SUN_SECOND = [29,30,31,32];
 
-List<int> SUN_THIRD = [33,34,35,36];
+const List<int> SUN_THIRD = [33,34,35,36];
 
-List<int> SUN_FOURTH = [37,38,39,40];
+const List<int> SUN_FOURTH = [37,38,39,40];
 
-List<int> SUN_FIFTH = [41,42,43,44];
+const List<int> SUN_FIFTH = [41,42,43,44];
 
-List<int> SUN_SIXTH = [45,46,47,48];
+const List<int> SUN_SIXTH = [45,46,47,48];
 
-List<DanceClass> DANCE_CLASSES = [
+const List<DanceClass> DANCE_CLASSES = [
   DanceClass(
       id: 1,
       name: 'Salsa',

@@ -35,7 +35,6 @@ class Favorites with ChangeNotifier {
       _favorites.insert(indexOfFavorite, Favorite(danceClassId: danceClassId, classesBlockId: classBlockId, isFavorite: true));
     } else {
       isFavorite = 0;
-      _favorites.removeAt(indexOfFavorite);
     }
     notifyListeners();
     DBHelper.insert('user_favorites', {
@@ -71,6 +70,7 @@ class Favorites with ChangeNotifier {
         var isCurrentlyFavorite = indexOfFavorite > -1 ? _favorites.elementAt(indexOfFavorite).isFavorite : false;
         int isFavorite = 0;
         if (isCurrentlyFavorite) {
+          print('toggling favorites dc_id: $danceClassId, cb_id: $classBlockId, is_fav: $isFavorite');
           _favorites.removeAt(indexOfFavorite);
           DBHelper.insert('user_favorites', {
             'dance_class_id': danceClassId,

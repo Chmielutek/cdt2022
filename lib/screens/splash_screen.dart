@@ -18,6 +18,8 @@ class SplashScreen extends StatelessWidget {
           context, MaterialPageRoute(builder: (ctx) => TabsScreen())
       );
     });
+
+    Size size = MediaQuery.of(context).size;
     
     return Scaffold(
       body: Center(
@@ -30,6 +32,7 @@ class SplashScreen extends StatelessWidget {
               child: Image.asset('assets/images/calle_logo.png'),
             ),
             Container(
+              width: size.width * 0.9,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
