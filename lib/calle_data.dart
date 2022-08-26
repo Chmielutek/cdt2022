@@ -9,7 +9,7 @@ List<Location> LOCATIONS = const [
       additionalInfo: 'Introductory Party',
       startTime: '10PM',
       address: 'Góralska 5\n53-610 Wrocław',
-      coordinates: Coordinates(51.10856310144485, 17.001785511734017),
+      coordinates: Coordinates(51.10856310144485, 17.001785511734017, '4252+CP Wrocław'),
       pictureUrl: 'assets/images/a2.png',
       previewUrl: 'assets/images/a2_location_preview.png',
       streetViewUrl: 'assets/images/a2_street_view.png'
@@ -21,7 +21,7 @@ List<Location> LOCATIONS = const [
       additionalInfo: 'Main Party + Concert',
       startTime: '10PM',
       address: 'Góralska 5\n53-610 Wrocław',
-      coordinates: Coordinates(51.10856310144485, 17.001785511734017),
+      coordinates: Coordinates(51.10856310144485, 17.001785511734017, '4252+CP Wrocław'),
       pictureUrl: 'assets/images/a2.png',
       previewUrl: 'assets/images/a2_location_preview.png',
       streetViewUrl: 'assets/images/a2_street_view.png'
@@ -33,7 +33,7 @@ List<Location> LOCATIONS = const [
       additionalInfo: 'Goodbye Party',
       startTime: '10PM',
       address: 'Jana Ewangelisty Purkyniego 1\n50-155 Wrocław',
-      coordinates: Coordinates(51.11047722059544, 17.039336615339213),
+      coordinates: Coordinates(51.11047722059544, 17.039336615339213, '426Q+5PW Wrocław'),
       pictureUrl: 'assets/images/klasztor.png',
       previewUrl: 'assets/images/klasztor_location_preview.png',
       streetViewUrl: 'assets/images/klasztor_street_view.png'
@@ -44,7 +44,7 @@ List<Location> LOCATIONS = const [
       venue: 'Calle School',
       additionalInfo: 'Calle School',
       address: 'Nowa 14-16\nWrocław',
-      coordinates: Coordinates(51.10681101519131, 17.039852214118902),
+      coordinates: Coordinates(51.10681101519131, 17.039852214118902, '424Q+PWH Wrocław'),
       pictureUrl: 'assets/images/school.png',
       previewUrl: 'assets/images/school_location_preview.png',
       streetViewUrl: 'assets/images/school_street_view.png'
@@ -55,7 +55,7 @@ List<Location> LOCATIONS = const [
       venue: 'Hotel Premiere Classe',
       additionalInfo: 'Calle Hotel',
       address: 'Ślężna 28\n53-302 Wrocław',
-      coordinates: Coordinates(51.093877881930524, 17.03137141460592),
+      coordinates: Coordinates(51.093877881930524, 17.03137141460592, '32VJ+HG5 Wrocław'),
       pictureUrl: 'assets/images/hotel.png',
       previewUrl: 'assets/images/hotel_location_preview.png',
       streetViewUrl: 'assets/images/hotel_street_view.png'

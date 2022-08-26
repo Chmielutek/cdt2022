@@ -183,8 +183,10 @@ class LocationDetailsMap extends StatelessWidget {
   Future<void> _launchGoogleMap(Location location) async {
     final lat = location.coordinates.latitude;
     final lng = location.coordinates.longitude;
+    final query = location.coordinates.query;
 
-    MapsLauncher.launchCoordinates(lat, lng);
+    MapsLauncher.launchQuery(query);
+    // MapsLauncher.launchCoordinates(lat, lng);
   }
 
   @override

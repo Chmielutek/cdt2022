@@ -27,6 +27,7 @@ class Location {
 class Coordinates {
   final double latitude;
   final double longitude;
+  final String query;
 
-  const Coordinates(this.latitude, this.longitude);
+  const Coordinates(this.latitude, this.longitude, this.query);
 }
