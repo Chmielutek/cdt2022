@@ -41,9 +41,9 @@ List<Location> LOCATIONS = const [
   Location(
       id: '4',
       name: 'Classes',
-      venue: 'Liceum Ogólnokształcące nr 9',
+      venue: 'Liceum nr 9',
       additionalInfo: 'Calle School',
-      address: 'Piotra Skargi 31\nWrocław',
+      address: 'Nowa 14-16\nWrocław',
       coordinates: Coordinates(51.10681101519131, 17.039852214118902, '424Q+PWH Wrocław'),
       pictureUrl: 'assets/images/school.png',
       previewUrl: 'assets/images/school_location_preview.png',

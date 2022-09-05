@@ -85,6 +85,11 @@ class LocationDetailsAddress extends StatelessWidget {
                         text: '${location.venue.toUpperCase()} \n',
                         style: TextStyle(fontSize: 19, color: Colors.black),
                       ),
+                      if (location.id == '4')
+                        TextSpan(
+                            text: '${AppLocalizations.of(context)?.backentrance as String} \n',
+                            style: TextStyle(color: Colors.black)
+                        ),
                       TextSpan(
                         text: '${location.address} \n',
                           style: TextStyle(color: Colors.black)
@@ -167,11 +172,22 @@ class LocationDetailsPicture extends StatelessWidget {
                       color: Theme.of(context).primaryColor,
                       borderRadius: BorderRadius.circular(10)
                   ),
-                  child: Text(location.venue,
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white
-                    ),
+                  child: Column(
+                    children: [
+                      Text(location.venue,
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white
+                        ),
+                      ),
+                      if (location.id == '4')
+                        Text(AppLocalizations.of(context)?.backentrance as String,
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.white
+                          ),
+                        )
+                    ],
                   ),
                 )
               ],
