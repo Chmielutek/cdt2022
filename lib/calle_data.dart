@@ -6,25 +6,25 @@ List<Location> LOCATIONS = const [
       id: '1',
       name: 'Friday Party',
       venue: 'A2 - centrum koncertowe',
-      additionalInfo: 'Introductory Party + Concert',
+      additionalInfo: 'Party + Concert 11PM',
       startTime: '10PM',
       address: 'Góralska 5\n53-610 Wrocław',
       coordinates: Coordinates(51.10856310144485, 17.001785511734017, '4252+CP Wrocław'),
       pictureUrl: 'assets/images/a2.png',
       previewUrl: 'assets/images/a2_location_preview.png',
-      streetViewUrl: 'assets/images/a2_street_view.png'
+      streetViewUrl: 'assets/images/a2_street_view2.png'
   ),
   Location(
       id: '2',
       name: 'Saturday Party',
       venue: 'A2 - centrum koncertowe',
-      additionalInfo: 'Main Party + Shows',
-      startTime: '10PM',
+      additionalInfo: 'Main Party + Shows 12AM',
+      startTime: '10:30PM',
       address: 'Góralska 5\n53-610 Wrocław',
       coordinates: Coordinates(51.10856310144485, 17.001785511734017, '4252+CP Wrocław'),
       pictureUrl: 'assets/images/a2.png',
       previewUrl: 'assets/images/a2_location_preview.png',
-      streetViewUrl: 'assets/images/a2_street_view.png'
+      streetViewUrl: 'assets/images/a2_street_view2.png'
   ),
   Location(
       id: '3',
@@ -41,9 +41,9 @@ List<Location> LOCATIONS = const [
   Location(
       id: '4',
       name: 'Classes',
-      venue: 'Calle School',
+      venue: 'Liceum Ogólnokształcące nr 9',
       additionalInfo: 'Calle School',
-      address: 'Nowa 14-16\nWrocław',
+      address: 'Piotra Skargi 31\nWrocław',
       coordinates: Coordinates(51.10681101519131, 17.039852214118902, '424Q+PWH Wrocław'),
       pictureUrl: 'assets/images/school.png',
       previewUrl: 'assets/images/school_location_preview.png',
@@ -72,31 +72,31 @@ List<ClassesBlock> SATURDAY_CLASSES = const [
   ClassesBlock(
       id: 2,
       day: Day.SATURDAY,
-      startingHour: 11,
+      startingHour: 1110,
       classesIds: SAT_SECOND
   ),
   ClassesBlock(
       id: 3,
       day: Day.SATURDAY,
-      startingHour: 12,
+      startingHour: 1220,
       classesIds: SAT_THIRD
   ),
   ClassesBlock(
       id: 4,
       day: Day.SATURDAY,
-      startingHour: 14,
+      startingHour: 15,
       classesIds: SAT_FOURTH
   ),
   ClassesBlock(
       id: 5,
       day: Day.SATURDAY,
-      startingHour: 15,
+      startingHour: 1610,
       classesIds: SAT_FIFTH
   ),
   ClassesBlock(
       id: 6,
       day: Day.SATURDAY,
-      startingHour: 16,
+      startingHour: 1720,
       classesIds: SAT_SIXTH
   ),
 ];
@@ -106,37 +106,37 @@ List<ClassesBlock> SUNDAY_CLASSES = const [
   ClassesBlock(
       id: 7,
       day: Day.SUNDAY,
-      startingHour: 10,
+      startingHour: 11,
       classesIds: SUN_FIRST
   ),
   ClassesBlock(
       id: 8,
       day: Day.SUNDAY,
-      startingHour: 11,
+      startingHour: 12,
       classesIds: SUN_SECOND
   ),
   ClassesBlock(
       id: 9,
       day: Day.SUNDAY,
-      startingHour: 12,
+      startingHour: 13,
       classesIds: SUN_THIRD
   ),
   ClassesBlock(
       id: 10,
       day: Day.SUNDAY,
-      startingHour: 14,
+      startingHour: 15,
       classesIds: SUN_FOURTH
   ),
   ClassesBlock(
       id: 11,
       day: Day.SUNDAY,
-      startingHour: 15,
+      startingHour: 1610,
       classesIds: SUN_FIFTH
   ),
   ClassesBlock(
       id: 12,
       day: Day.SUNDAY,
-      startingHour: 16,
+      startingHour: 1720,
       classesIds: SUN_SIXTH
   ),
 ];
@@ -169,338 +169,338 @@ const List<int> SUN_SIXTH = [45,46,47,48];
 const List<DanceClass> DANCE_CLASSES = [
   DanceClass(
       id: 1,
-      name: 'Salsa',
-      instructors: 'Marta i Kijek',
+      name: 'Salsa Partnerwork',
+      instructors: 'Ruggiero & Heidi',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.A
   ),
   DanceClass(
       id: 2,
-      name: 'Brazylijskie Pośladki',
-      instructors: 'Loco',
+      name: 'Bodymovement',
+      instructors: 'Oliwka',
       difficulty: Difficulty.ADVANCED,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 3,
-      name: 'Tango Bailando',
-      instructors: 'Misiania',
-      difficulty: Difficulty.OPEN,
+      name: 'Ellegua',
+      instructors: 'Andy & Yuliet',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 4,
-      name: 'Leżing con kanapa',
-      instructors: 'Chmielu',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Sexy Reggeaton',
+      instructors: 'Yenifer',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.D
   ),
   DanceClass(
       id: 5,
-      name: 'test-2-1',
-      instructors: 'Marta i Kijek',
+      name: 'Timba Partnerwork',
+      instructors: 'Andy & Yuliet',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.A
   ),
   DanceClass(
       id: 6,
-      name: 'test-2-2',
-      instructors: 'Loco',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Son con Abanico (Ladies)',
+      instructors: 'Ania Seruga',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 7,
-      name: 'test-2-3',
-      instructors: 'Misiania',
-      difficulty: Difficulty.OPEN,
+      name: 'Oggun',
+      instructors: 'Fredy',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 8,
-      name: 'test-2-4',
-      instructors: 'Chmielu',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Salsa con Hip Hop',
+      instructors: 'Bojana',
+      difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.D
   ),
   DanceClass(
       id: 9,
-      name: 'test-3-1',
-      instructors: 'Marta i Kijek',
-      difficulty: Difficulty.INTERMEDIATE,
+      name: 'Live Music Interpretation',
+      instructors: 'Yoandy',
+      difficulty: Difficulty.ADVANCED,
       classRoom: ClassRoom.A
   ),
   DanceClass(
       id: 10,
-      name: 'test-3-2',
-      instructors: 'Loco',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Lady Styling',
+      instructors: 'Oliwka',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 11,
-      name: 'test-3-3',
-      instructors: 'Misiania',
-      difficulty: Difficulty.OPEN,
+      name: 'Men Styling',
+      instructors: 'Fredy',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 12,
-      name: 'test-3-4',
-      instructors: 'Chmielu',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Timba Musicality en Pareja',
+      instructors: 'Ania & Jacek',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.D
   ),
   DanceClass(
       id: 13,
-      name: 'test-4-1',
-      instructors: 'Marta i Kijek',
+      name: 'Salsa con Estilo',
+      instructors: 'Fredy & Bojana',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.A
   ),
   DanceClass(
       id: 14,
-      name: 'test-4-2',
-      instructors: 'Loco',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Lady Styling',
+      instructors: 'Yuliet',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 15,
-      name: 'test-4-3',
-      instructors: 'Misiania',
-      difficulty: Difficulty.OPEN,
+      name: 'Abakua',
+      instructors: 'Andy',
+      difficulty: Difficulty.ADVANCED,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 16,
-      name: 'test-4-4',
-      instructors: 'Chmielu',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Salsa con Rumba (Guaguanco vs Columbia)',
+      instructors: 'Ania K. & Eryk',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.D
   ),
   DanceClass(
       id: 17,
-      name: 'test-5-1',
-      instructors: 'Marta i Kijek',
+      name: 'Timba',
+      instructors: 'Eryk & Oliwia',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.A
   ),
   DanceClass(
       id: 18,
-      name: 'test-5-2',
-      instructors: 'Loco',
+      name: 'Afro Contemporary',
+      instructors: 'Yenifer',
       difficulty: Difficulty.ADVANCED,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 19,
-      name: 'test-5-3',
-      instructors: 'Misiania',
-      difficulty: Difficulty.OPEN,
+      name: 'Arara',
+      instructors: 'Jacqueline',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 20,
-      name: 'test-5-4',
-      instructors: 'Chmielu',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Reggeaton',
+      instructors: 'Heidi',
+      difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.D
   ),
   DanceClass(
       id: 21,
-      name: 'test-6-1',
-      instructors: 'Marta i Kijek',
+      name: 'Son',
+      instructors: 'Ania & Jacek',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.A
   ),
   DanceClass(
       id: 22,
-      name: 'test-6-2',
-      instructors: 'Loco',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Reggeaton',
+      instructors: 'Yoandy',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 23,
-      name: 'test-6-3',
-      instructors: 'Misiania',
-      difficulty: Difficulty.OPEN,
+      name: 'Chango',
+      instructors: 'Jacqueline',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 24,
-      name: 'test-6-4',
-      instructors: 'Chmielu',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Salsa Suelta',
+      instructors: 'Ruggiero',
+      difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.D
   ),
   DanceClass(
       id: 25,
-      name: 'test-7-1',
-      instructors: 'Marta i Kijek',
+      name: 'Rumba Guaguanco part 1',
+      instructors: 'Andy & Yuliet',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.A
   ),
   DanceClass(
       id: 26,
-      name: 'test-7-2',
-      instructors: 'Loco',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Reglaton',
+      instructors: 'Regla',
+      difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 27,
-      name: 'test-7-3',
-      instructors: 'Misiania',
-      difficulty: Difficulty.OPEN,
+      name: 'Timba Ladies',
+      instructors: 'Ania Kurowska',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 28,
-      name: 'test-7-4',
-      instructors: 'Chmielu',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Men Styling',
+      instructors: 'Ruggiero',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.D
   ),
   DanceClass(
       id: 29,
-      name: 'test-8-1',
-      instructors: 'Marta i Kijek',
+      name: 'Rumba Guaguanco part 2',
+      instructors: 'Andy & Yuliet',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.A
   ),
   DanceClass(
       id: 30,
-      name: 'test-8-2',
-      instructors: 'Loco',
+      name: 'Salsa Show Style',
+      instructors: 'Ruggiero & Heidi',
       difficulty: Difficulty.ADVANCED,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 31,
-      name: 'test-8-3',
-      instructors: 'Misiania',
+      name: 'Salsa con Afro',
+      instructors: 'Ania Seruga',
       difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 32,
-      name: 'test-8-4',
-      instructors: 'Chmielu',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Rueda de Casino',
+      instructors: 'Jacek',
+      difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.D
   ),
   DanceClass(
       id: 33,
-      name: 'test-9-1',
-      instructors: 'Marta i Kijek',
-      difficulty: Difficulty.INTERMEDIATE,
+      name: 'Timba New Style',
+      instructors: 'Yoandy & Yenifer',
+      difficulty: Difficulty.ADVANCED,
       classRoom: ClassRoom.A
   ),
   DanceClass(
       id: 34,
-      name: 'test-9-2',
-      instructors: 'Loco',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Son Tradicional',
+      instructors: 'Fredy & Bojana',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 35,
-      name: 'test-9-3',
-      instructors: 'Misiania',
+      name: 'Conga Carnaval',
+      instructors: 'Jacqueline',
       difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 36,
-      name: 'test-9-4',
-      instructors: 'Chmielu',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Despelote',
+      instructors: 'Eryk',
+      difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.D
   ),
   DanceClass(
       id: 37,
-      name: 'test-10-1',
-      instructors: 'Marta i Kijek',
-      difficulty: Difficulty.INTERMEDIATE,
+      name: 'Casino en Pareja',
+      instructors: 'Yoandy & Yenifer',
+      difficulty: Difficulty.ADVANCED,
       classRoom: ClassRoom.A
   ),
   DanceClass(
       id: 38,
-      name: 'test-10-2',
-      instructors: 'Loco',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Tropicana',
+      instructors: 'Regla',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 39,
-      name: 'test-10-3',
-      instructors: 'Misiania',
-      difficulty: Difficulty.OPEN,
+      name: 'Palo',
+      instructors: 'Andy & Yuliet',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 40,
-      name: 'test-10-4',
-      instructors: 'Chmielu',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Columbia',
+      instructors: 'Eryk',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.D
   ),
   DanceClass(
       id: 41,
-      name: 'test-11-1',
-      instructors: 'Marta i Kijek',
+      name: 'Timba con Reggeaton',
+      instructors: 'Fredy & Bojana',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.A
   ),
   DanceClass(
       id: 42,
-      name: 'test-11-2',
-      instructors: 'Loco',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Men Styling',
+      instructors: 'Jacek',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 43,
-      name: 'test-11-3',
-      instructors: 'Misiania',
-      difficulty: Difficulty.OPEN,
+      name: 'Ochun',
+      instructors: 'Jacqueline',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 44,
-      name: 'test-11-4',
-      instructors: 'Chmielu',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Suelta 4 fun!',
+      instructors: 'Kijek',
+      difficulty: Difficulty.FORFUN,
       classRoom: ClassRoom.D
   ),
   DanceClass(
       id: 45,
-      name: 'test-12-1',
-      instructors: 'Marta i Kijek',
+      name: 'Casino',
+      instructors: 'Eryk & Oliwka',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.A
   ),
   DanceClass(
       id: 46,
-      name: 'test-12-2',
-      instructors: 'Loco',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Reparto',
+      instructors: 'Yoandy',
+      difficulty: Difficulty.CHILLIN,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 47,
-      name: 'test-12-3',
-      instructors: 'Misiania',
+      name: 'Afro Fusion',
+      instructors: 'Heidi',
       difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 48,
-      name: 'test-12-4',
-      instructors: 'Chmielu',
-      difficulty: Difficulty.ADVANCED,
+      name: 'Mambo y Chachacha',
+      instructors: 'Regla',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.D
   ),
 ];

@@ -18,7 +18,7 @@ class DanceClass {
 }
 
 enum Difficulty {
-  OPEN, INTERMEDIATE, ADVANCED
+  OPEN, INTERMEDIATE, ADVANCED, FORFUN, CHILLIN
 }
 
 enum Day {

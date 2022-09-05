@@ -12,10 +12,13 @@
     "open": "Open",
     "intermediate": "Średnio-zaawansowane",
     "advanced": "Zaawansowane",
+    "forfun": "For Fun!",
+    "chillin": "Chillin'",
     "fridayparty": "Piątkowa Impreza",
     "fridayadditionalinfo": "Impreza Otwarcia",
     "satparty": "Sobotnia Impreza",
     "satadditionalinfo": "Główna Impreza + Koncert",
     "sunparty": "Niedzielna Impreza",
-    "sunadditionalinfo": "Impreza Pożegnalna"
+    "sunadditionalinfo": "Impreza Pożegnalna",
+    "copyaddress": "Skopiuj adres"
 }

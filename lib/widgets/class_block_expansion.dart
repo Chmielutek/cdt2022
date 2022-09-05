@@ -28,8 +28,17 @@ class _ClassBlocksExpansionState extends State<ClassBlocksExpansion> {
       case 11:
         formattedStartingHour = '11:00 AM';
         break;
+      case 1110:
+        formattedStartingHour = '11:10 AM';
+        break;
       case 12:
-        formattedStartingHour = '12:00 AM';
+        formattedStartingHour = '12:00 PM';
+        break;
+      case 1220:
+        formattedStartingHour = '12:20 PM';
+        break;
+      case 13:
+        formattedStartingHour = '1:00 PM';
         break;
       case 14:
         formattedStartingHour = '2:00 PM';
@@ -39,6 +48,12 @@ class _ClassBlocksExpansionState extends State<ClassBlocksExpansion> {
         break;
       case 16:
         formattedStartingHour = '4:00 PM';
+        break;
+      case 1610:
+        formattedStartingHour = '4:10 PM';
+        break;
+      case 1720:
+        formattedStartingHour = '5:20 PM';
         break;
     }
     return formattedStartingHour;
@@ -113,6 +128,12 @@ class _DanceClassCardState extends State<DanceClassCard> {
     }
     if (difficulty == Difficulty.ADVANCED) {
       return AppLocalizations.of(context)?.advanced as String;
+    }
+    if (difficulty == Difficulty.FORFUN) {
+      return AppLocalizations.of(context)?.forfun as String;
+    }
+    if (difficulty == Difficulty.CHILLIN) {
+      return AppLocalizations.of(context)?.chillin as String;
     }
     return '';
   }

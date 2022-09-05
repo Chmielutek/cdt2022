@@ -25,19 +25,6 @@ class FavoriteClassTimelineTile extends StatelessWidget {
     }
   }
 
-  // String formatDifficulty(Difficulty difficulty) {
-  //   if (difficulty == Difficulty.OPEN) {
-  //     return AppLocalizations.of(context)?.open as String;
-  //   }
-  //   if (difficulty == Difficulty.INTERMEDIATE) {
-  //     return AppLocalizations.of(context)?.intermediate as String;
-  //   }
-  //   if (difficulty == Difficulty.ADVANCED) {
-  //     return AppLocalizations.of(context)?.advanced as String;
-  //   }
-  //   return '';
-  // }
-
   String formatClassRoom(BuildContext context, ClassRoom classRoom) {
     if (classRoom == ClassRoom.A) {
       return '${AppLocalizations.of(context)?.classroom} A';
@@ -106,14 +93,21 @@ class FavoriteClassTimelineTile extends StatelessWidget {
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(danceClass.name),
-                          Text(danceClass.instructors)
-                        ],
+                      Container(
+                        width: size.width * 0.35,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(danceClass.name, softWrap: true, textAlign: TextAlign.center,),
+                            Text(danceClass.instructors)
+                          ],
+                        ),
                       ),
-                      Text(formatClassRoom(context, danceClass.classRoom))
+                      Container(
+                          width: size.width * 0.25,
+                          child: Text(formatClassRoom(context, danceClass.classRoom))
+                      )
                     ]
                 ),
               ),
@@ -140,8 +134,17 @@ class FavoriteClassStartingTime extends StatelessWidget {
       case 11:
         formattedStartingHour = '11:00 AM';
         break;
+      case 1110:
+        formattedStartingHour = '11:10 AM';
+        break;
       case 12:
-        formattedStartingHour = '12:00 AM';
+        formattedStartingHour = '12:00 PM';
+        break;
+      case 1220:
+        formattedStartingHour = '12:20 PM';
+        break;
+      case 13:
+        formattedStartingHour = '1:00 PM';
         break;
       case 14:
         formattedStartingHour = '2:00 PM';
@@ -151,6 +154,12 @@ class FavoriteClassStartingTime extends StatelessWidget {
         break;
       case 16:
         formattedStartingHour = '4:00 PM';
+        break;
+      case 1610:
+        formattedStartingHour = '4:10 PM';
+        break;
+      case 1720:
+        formattedStartingHour = '5:20 PM';
         break;
     }
     return formattedStartingHour;

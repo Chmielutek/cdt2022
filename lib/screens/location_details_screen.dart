@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:maps_launcher/maps_launcher.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_locatizations.dart';
 
 import '../calle_data.dart';
 import '../models/location.dart';
@@ -82,7 +83,7 @@ class LocationDetailsAddress extends StatelessWidget {
                     children: [
                       TextSpan(
                         text: '${location.venue.toUpperCase()} \n',
-                        style: TextStyle(fontSize: 20, color: Colors.black),
+                        style: TextStyle(fontSize: 19, color: Colors.black),
                       ),
                       TextSpan(
                         text: '${location.address} \n',
@@ -100,10 +101,17 @@ class LocationDetailsAddress extends StatelessWidget {
           ),
           Container(
             width: size.width * 0.2,
-            child: IconButton(
-              iconSize: 36,
-              onPressed: () => _copyToClipboard(context),
-              icon: Icon(Icons.copy),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  iconSize: 36,
+                  onPressed: () => _copyToClipboard(context),
+                  icon: Icon(Icons.copy),
+                ),
+                Text(AppLocalizations.of(context)?.copyaddress as String, textAlign: TextAlign.center,)
+              ],
             ),
           )
         ],

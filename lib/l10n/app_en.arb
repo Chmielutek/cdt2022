@@ -51,6 +51,14 @@
     "@advanced": {
         "description": ""
     },
+    "forfun": "For Fun!",
+    "@forfun": {
+        "description": ""
+    },
+    "chillin": "Chillin'",
+    "@chillin": {
+        "description": ""
+    },
     "fridayparty": "Friday Party",
     "@fridayparty": {
         "description": ""
@@ -73,6 +81,10 @@
     },
     "sunadditionalinfo": "Goodbye Party",
     "@sunadditionalinfo": {
+        "description": ""
+    },
+    "copyaddress": "Copy address",
+    "@copyaddress": {
         "description": ""
     }
 }
