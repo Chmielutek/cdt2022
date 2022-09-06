@@ -22,31 +22,12 @@ class SplashScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              height: 300,
-              width: 300,
-              child: Image.asset('assets/images/calle_logo.png'),
-            ),
-            Container(
-              width: size.width * 0.9,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(quote,
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                    fontSize: 24,
-                    fontStyle: FontStyle.italic
-                  ),),
-                  Text(author,)
-                ],
-              ),
-            )
-          ],
+        child: Container(
+          width: size.width,
+          height: size.height,
+          child: Image.asset('assets/images/calle_logo.png'),
         ),
       )
     );

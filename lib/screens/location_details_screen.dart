@@ -209,6 +209,7 @@ class LocationDetailsMap extends StatelessWidget {
     final lng = location.coordinates.longitude;
     final query = location.coordinates.query;
 
+
     MapsLauncher.launchQuery(query);
     // MapsLauncher.launchCoordinates(lat, lng);
   }
@@ -231,12 +232,12 @@ class LocationDetailsMap extends StatelessWidget {
         ),
         Positioned(
           bottom: 20,
-          left: 100,
+          left: size.width / 5,
           child: Card(
             elevation: 5,
             shadowColor: Colors.grey,
             child: Container(
-              width: size.width / 2,
+              width: size.width * 0.6,
               decoration: BoxDecoration(
                 color: Colors.white,
               ),

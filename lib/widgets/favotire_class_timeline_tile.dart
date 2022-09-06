@@ -69,20 +69,20 @@ class FavoriteClassTimelineTile extends StatelessWidget {
       axis: TimelineAxis.vertical,
       alignment: TimelineAlign.start,
       endChild: Container(
-        height: size.height/8,
-        width: size.width * 0.65,
+        height: size.height/6,
+        width: size.width * 0.85,
         child: Row(
           children: [
             Container(
-                width: size.width * 0.25,
+                width: size.width * 0.2,
                 child: FavoriteClassStartingTime(this.startingHour)
             ),
             danceClass != null ?
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: Container(
-                height: size.height/8,
-                width: size.width * 0.6,
+                height: size.height/6,
+                width: size.width * 0.65,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(8)),
                     gradient: LinearGradient(
@@ -94,7 +94,7 @@ class FavoriteClassTimelineTile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        width: size.width * 0.35,
+                        width: size.width * 0.4,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -170,6 +170,6 @@ class FavoriteClassStartingTime extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(_formatStartingHour(this.startingHour), style: TextStyle(fontSize: 18),);
+    return Text(_formatStartingHour(this.startingHour), style: TextStyle(fontSize: 14),);
   }
 }
