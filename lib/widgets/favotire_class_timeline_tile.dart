@@ -27,16 +27,16 @@ class FavoriteClassTimelineTile extends StatelessWidget {
 
   String formatClassRoom(BuildContext context, ClassRoom classRoom) {
     if (classRoom == ClassRoom.A) {
-      return '${AppLocalizations.of(context)?.classroom} A';
+      return '${AppLocalizations.of(context)?.classroom} 1';
     }
     if (classRoom == ClassRoom.B) {
-      return '${AppLocalizations.of(context)?.classroom} B';
+      return '${AppLocalizations.of(context)?.classroom} 2';
     }
     if (classRoom == ClassRoom.C) {
-      return '${AppLocalizations.of(context)?.classroom} C';
+      return '${AppLocalizations.of(context)?.classroom} 3';
     }
     if (classRoom == ClassRoom.D) {
-      return '${AppLocalizations.of(context)?.classroom} D';
+      return '${AppLocalizations.of(context)?.classroom} 4';
     }
     return '';
   }
@@ -145,6 +145,9 @@ class FavoriteClassStartingTime extends StatelessWidget {
         break;
       case 13:
         formattedStartingHour = '1:00 PM';
+        break;
+      case 1320:
+        formattedStartingHour = '1:20 PM';
         break;
       case 14:
         formattedStartingHour = '2:00 PM';

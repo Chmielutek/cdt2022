@@ -82,6 +82,12 @@ List<ClassesBlock> SATURDAY_CLASSES = const [
       classesIds: SAT_THIRD
   ),
   ClassesBlock(
+      id: 13,
+      day: Day.SATURDAY,
+      startingHour: 1320,
+      classesIds: SAT_PHOTO
+  ),
+  ClassesBlock(
       id: 4,
       day: Day.SATURDAY,
       startingHour: 15,
@@ -146,6 +152,8 @@ const List<int> SAT_FIRST = [1, 2, 3, 4];
 const List<int> SAT_SECOND = [5,6,7,8];
 
 const List<int> SAT_THIRD = [9,10,11,12];
+
+const List<int> SAT_PHOTO = [49];
 
 const List<int> SAT_FOURTH = [13,14,15,16];
 
@@ -502,5 +510,12 @@ const List<DanceClass> DANCE_CLASSES = [
       instructors: 'Regla',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.D
+  ),
+  DanceClass(
+      id: 49,
+      name: 'Group Photo',
+      instructors: 'Everyone!',
+      difficulty: Difficulty.OPEN,
+      classRoom: ClassRoom.A
   ),
 ];

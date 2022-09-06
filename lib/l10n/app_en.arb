@@ -90,5 +90,9 @@
     "backentrance": "(Back entrance)",
     "@backentrance": {
         "description": ""
+    },
+    "groupphoto": "Group Photo",
+    "@groupphoto": {
+        "description": ""
     }
 }
