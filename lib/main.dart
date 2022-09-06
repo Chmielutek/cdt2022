@@ -6,6 +6,7 @@ import 'package:flutter_gen/gen_l10n/app_locatizations.dart';
 
 import 'models/favorites.dart';
 import 'screens/about_us_screen.dart';
+import 'screens/information_screen.dart';
 import 'screens/location_details_screen.dart';
 import 'screens/tabs_screen.dart';
 import 'screens/splash_screen.dart';
@@ -67,7 +68,8 @@ class _MyAppState extends State<MyApp> {
         routes: {
           TabsScreen.routeName: (ctx) => TabsScreen(),
           AboutUsScreen.routeName: (ctx) => AboutUsScreen(),
-          LocationDetailsScreen.routeName: (ctx) => LocationDetailsScreen()
+          LocationDetailsScreen.routeName: (ctx) => LocationDetailsScreen(),
+          InformationScreen.routeName: (ctx) => InformationScreen()
         },
       ),
     );

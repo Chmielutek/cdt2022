@@ -1,4 +1,5 @@
 import 'package:calle_de_timberos/main.dart';
+import 'package:calle_de_timberos/screens/information_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_locatizations.dart';
 
@@ -33,6 +34,10 @@ class _TabsScreenState extends State<TabsScreen> {
       {
         'page': FavoritesScreen(),
         'title': 'Classes'
+      },
+      {
+        'page': InformationScreen(),
+        'title': 'Info'
       },
     ];
     super.initState();
@@ -72,6 +77,7 @@ class _TabsScreenState extends State<TabsScreen> {
       // drawer: MainDrawer(),
       body: _pages[_selectedPageIndex]['page'] as Widget?,
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         elevation: 0,
         onTap: _selectPage,
         backgroundColor: Colors.transparent,
@@ -90,6 +96,10 @@ class _TabsScreenState extends State<TabsScreen> {
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite),
               label: AppLocalizations.of(context)?.favorites as String
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.info_outline_rounded),
+              label: AppLocalizations.of(context)?.information as String
           )
         ],
       ),

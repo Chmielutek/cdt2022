@@ -19,8 +19,12 @@
     "@favorites": {
         "description": ""
     },
-    "information": "Information",
+    "information": "Info",
     "@information": {
+        "description": ""
+    },
+    "friday": "Friday",
+    "@friday": {
         "description": ""
     },
     "saturday": "Saturday",
@@ -97,6 +101,26 @@
     },
     "groupphoto": "Group Photo",
     "@groupphoto": {
+        "description": ""
+    },
+    "openinghours": "FESTIVAL OFFICE\nOPENING HOURS",
+    "@openinghours": {
+        "description": ""
+    },
+    "busschedule": "BUS SCHEDULE",
+    "@busschedule": {
+        "description": ""
+    },
+    "fromhotel": "FROM HOTEL TO PARTY",
+    "@fromhotel": {
+        "description": ""
+    },
+    "fromparty": "FROM PARTY TO HOTEL",
+    "@fromparty": {
+        "description": ""
+    },
+    "workshopplace": "WORKSHOP PLACE",
+    "@workshopplace": {
         "description": ""
     }
 }

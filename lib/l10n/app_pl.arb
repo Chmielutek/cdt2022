@@ -4,6 +4,7 @@
 	"classes": "Zajęcia",
 	"locations": "Miejsca",
     "favorites": "Ulubione",
+    "friday": "Piątek",
     "saturday": "Sobota",
     "sunday": "Niedziela",
     "nofavsheader": "Nie masz jeszcze żadnych ulubionych!",
@@ -23,5 +24,10 @@
     "copyaddress": "Skopiuj adres",
     "backentrance": "(Tylne Wejście)",
     "groupphoto": "Zdjęcie Groupowe",
-    "information": "Informacje"
+    "information": "Info",
+    "openinghours": "GODZINY OTWARCIA\nBIURA FESTIWALOWEGO",
+    "busschedule": "ROZKŁAD JAZDY AUTOBUSU",
+    "fromhotel": "Z HOTELU NA IMPREZĘ",
+    "fromparty": "Z IMPREZY DO HOTELU",
+    "workshopplace": "WARSZTATY"
 }
