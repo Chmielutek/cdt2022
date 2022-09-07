@@ -88,6 +88,12 @@ List<ClassesBlock> SATURDAY_CLASSES = const [
       classesIds: SAT_PHOTO
   ),
   ClassesBlock(
+      id: 14,
+      day: Day.SATURDAY,
+      startingHour: 1340,
+      classesIds: SAT_LUNCH
+  ),
+  ClassesBlock(
       id: 4,
       day: Day.SATURDAY,
       startingHour: 15,
@@ -118,31 +124,37 @@ List<ClassesBlock> SUNDAY_CLASSES = const [
   ClassesBlock(
       id: 8,
       day: Day.SUNDAY,
-      startingHour: 12,
+      startingHour: 1210,
       classesIds: SUN_SECOND
   ),
   ClassesBlock(
       id: 9,
       day: Day.SUNDAY,
-      startingHour: 13,
+      startingHour: 1320,
       classesIds: SUN_THIRD
+  ),
+  ClassesBlock(
+      id: 14,
+      day: Day.SUNDAY,
+      startingHour: 1420,
+      classesIds: SUN_LUNCH
   ),
   ClassesBlock(
       id: 10,
       day: Day.SUNDAY,
-      startingHour: 15,
+      startingHour: 1530,
       classesIds: SUN_FOURTH
   ),
   ClassesBlock(
       id: 11,
       day: Day.SUNDAY,
-      startingHour: 1610,
+      startingHour: 1640,
       classesIds: SUN_FIFTH
   ),
   ClassesBlock(
       id: 12,
       day: Day.SUNDAY,
-      startingHour: 1720,
+      startingHour: 1750,
       classesIds: SUN_SIXTH
   ),
 ];
@@ -154,6 +166,7 @@ const List<int> SAT_SECOND = [5,6,7,8];
 const List<int> SAT_THIRD = [9,10,11,12];
 
 const List<int> SAT_PHOTO = [49];
+const List<int> SAT_LUNCH = [50, 52];
 
 const List<int> SAT_FOURTH = [13,14,15,16];
 
@@ -173,6 +186,7 @@ const List<int> SUN_FOURTH = [37,38,39,40];
 const List<int> SUN_FIFTH = [41,42,43,44];
 
 const List<int> SUN_SIXTH = [45,46,47,48];
+const List<int> SUN_LUNCH = [51];
 
 const List<DanceClass> DANCE_CLASSES = [
   DanceClass(
@@ -387,7 +401,7 @@ const List<DanceClass> DANCE_CLASSES = [
   ),
   DanceClass(
       id: 31,
-      name: 'Salsa con Afro',
+      name: 'Afro Bodymovement',
       instructors: 'Ania Seruga',
       difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.C
@@ -515,6 +529,27 @@ const List<DanceClass> DANCE_CLASSES = [
       id: 49,
       name: 'Group Photo',
       instructors: 'Everyone!',
+      difficulty: Difficulty.OPEN,
+      classRoom: ClassRoom.A
+  ),
+  DanceClass(
+      id: 50,
+      name: 'Lunch',
+      instructors: 'Everyone!',
+      difficulty: Difficulty.OPEN,
+      classRoom: ClassRoom.A
+  ),
+  DanceClass(
+      id: 51,
+      name: 'Lunch',
+      instructors: 'Everyone!',
+      difficulty: Difficulty.OPEN,
+      classRoom: ClassRoom.A
+  ),
+  DanceClass(
+      id: 52,
+      name: 'Rueda de Casino',
+      instructors: 'Luis',
       difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.A
   ),

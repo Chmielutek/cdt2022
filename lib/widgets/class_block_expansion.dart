@@ -19,7 +19,7 @@ class ClassBlocksExpansion extends StatefulWidget {
 class _ClassBlocksExpansionState extends State<ClassBlocksExpansion> {
   List<bool> _isExpanded = List.generate(10, (_) => false);
 
-  String _formatStartingHour(int startingHour) {
+  String _formatStartingHour(int startingHour, Day day) {
     var formattedStartingHour = '';
     switch (startingHour) {
       case 10:
@@ -34,6 +34,9 @@ class _ClassBlocksExpansionState extends State<ClassBlocksExpansion> {
       case 12:
         formattedStartingHour = '12:00 PM';
         break;
+      case 1210:
+        formattedStartingHour = '12:10 PM';
+        break;
       case 1220:
         formattedStartingHour = '12:20 PM';
         break;
@@ -41,13 +44,26 @@ class _ClassBlocksExpansionState extends State<ClassBlocksExpansion> {
         formattedStartingHour = '1:00 PM';
         break;
       case 1320:
-        formattedStartingHour = '1:20 PM - ${AppLocalizations.of(context)?.groupphoto as String}';
+        if (day == Day.SATURDAY) {
+          formattedStartingHour = '1:20 PM - ${AppLocalizations.of(context)?.groupphoto as String}';
+        } else {
+          formattedStartingHour = '1:20 PM';
+        }
+        break;
+      case 1340:
+        formattedStartingHour = '1:40 PM - Lunch & Rueda';
         break;
       case 14:
         formattedStartingHour = '2:00 PM';
         break;
+      case 1420:
+        formattedStartingHour = '2:40PM - Lunch';
+        break;
       case 15:
         formattedStartingHour = '3:00 PM';
+        break;
+      case 1530:
+        formattedStartingHour = '3:30 PM';
         break;
       case 16:
         formattedStartingHour = '4:00 PM';
@@ -55,8 +71,14 @@ class _ClassBlocksExpansionState extends State<ClassBlocksExpansion> {
       case 1610:
         formattedStartingHour = '4:10 PM';
         break;
+      case 1640:
+        formattedStartingHour = '4:40 PM';
+        break;
       case 1720:
         formattedStartingHour = '5:20 PM';
+        break;
+      case 1750:
+        formattedStartingHour = '5:50 PM';
         break;
     }
     return formattedStartingHour;
@@ -89,7 +111,7 @@ class _ClassBlocksExpansionState extends State<ClassBlocksExpansion> {
                       return Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(_formatStartingHour(widget.classBlocks[i].startingHour)),
+                          Text(_formatStartingHour(widget.classBlocks[i].startingHour, widget.classBlocks[i].day)),
                           if (favoriteBlocksIds.contains(widget.classBlocks[i].id))
                             Icon(Icons.favorite)
                         ],

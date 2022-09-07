@@ -180,7 +180,7 @@ class BusSchedule extends StatelessWidget {
         ),
         Container(
           height: 25,
-          child: Text('03:00 | 03:30 | 04:00 | 04:30 | 05:30 | 06:00', style: TextStyle(fontSize: 16)),
+          child: Text('03:00 | 03:30 | 04:00 | 04:30 | 05:00 | 05:30', style: TextStyle(fontSize: 16)),
         )
       ],
     );
