@@ -161,11 +161,17 @@ class FavoriteClassStartingTime extends StatelessWidget {
       case 1420:
         formattedStartingHour = '2:20 PM';
         break;
+      case 1430:
+        formattedStartingHour = '2:30 PM';
+        break;
       case 15:
         formattedStartingHour = '3:00 PM';
         break;
       case 1530:
         formattedStartingHour = '3:30 PM';
+        break;
+      case 1540:
+        formattedStartingHour = '3:40 PM';
         break;
       case 16:
         formattedStartingHour = '4:00 PM';
@@ -176,11 +182,17 @@ class FavoriteClassStartingTime extends StatelessWidget {
       case 1640:
         formattedStartingHour = '4:40 PM';
         break;
+      case 1650:
+        formattedStartingHour = '4:50 PM';
+        break;
       case 1720:
         formattedStartingHour = '5:20 PM';
         break;
       case 1750:
         formattedStartingHour = '5:50 PM';
+        break;
+      case 1800:
+        formattedStartingHour = '6:00 PM';
         break;
     }
     return formattedStartingHour;

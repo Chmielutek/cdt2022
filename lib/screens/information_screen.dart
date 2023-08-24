@@ -124,7 +124,7 @@ class SundayOffice extends StatelessWidget {
         ),
         Container(
           height: 25,
-          child: Text('22:00 – 1:00 | STARY KLASZTOR', style: TextStyle(fontSize: 16)),
+          child: Text('22:00 – 1:00 | LA ROSA NEGRA', style: TextStyle(fontSize: 16)),
         )
       ],
     );

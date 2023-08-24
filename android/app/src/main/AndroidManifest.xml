@@ -2,7 +2,7 @@
     package="com.chmielpol_software.calle_de_timberos">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="Calle De Timberos 2022"
+        android:label="Calle De Timberos 2023"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

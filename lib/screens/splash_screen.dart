@@ -27,7 +27,7 @@ class SplashScreen extends StatelessWidget {
         child: Container(
           width: size.width,
           height: size.height,
-          child: Image.asset('assets/images/calle_logo.png'),
+          child: Image.asset('assets/images/calle_logo_2023.png'),
         ),
       )
     );
