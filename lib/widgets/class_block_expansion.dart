@@ -51,7 +51,7 @@ class _ClassBlocksExpansionState extends State<ClassBlocksExpansion> {
         }
         break;
       case 1340:
-        formattedStartingHour = '1:40 PM - Lunch & Rueda';
+        formattedStartingHour = '1:40 PM - Lunch';
         break;
       case 14:
         formattedStartingHour = '2:00 PM';

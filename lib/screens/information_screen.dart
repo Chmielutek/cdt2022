@@ -17,7 +17,7 @@ class InformationScreen extends StatelessWidget {
                   FridayOffice(),
                   SaturdayOffice(),
                   SundayOffice(),
-                  BusSchedule()
+                  // BusSchedule()
                 ]
             ),
         ),
