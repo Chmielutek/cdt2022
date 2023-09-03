@@ -268,8 +268,8 @@ const List<DanceClass> DANCE_CLASSES = [
   ),
   DanceClass(
       id: 12,
-      name: 'Casino',
-      instructors: 'Oliwka & eryk',
+      name: 'Timba musicality',
+      instructors: 'Jacek & Ania',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.D
   ),
@@ -282,23 +282,23 @@ const List<DanceClass> DANCE_CLASSES = [
   ),
   DanceClass(
       id: 14,
-      name: 'Timba partnerwork',
-      instructors: 'Kevin & Geysa',
+      name: 'Casino',
+      instructors: 'Eryk & Oliwka',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 15,
-      name: 'Timba solo',
-      instructors: 'Fredyclan',
+      name: 'Reggeaton',
+      instructors: 'Regla',
       difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 16,
-      name: 'Ellegua',
-      instructors: 'Ania',
-      difficulty: Difficulty.INTERMEDIATE,
+      name: 'Timba solo',
+      instructors: 'Fredyclan',
+      difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.D
   ),
   DanceClass(
@@ -310,21 +310,21 @@ const List<DanceClass> DANCE_CLASSES = [
   ),
   DanceClass(
       id: 18,
-      name: 'Timba musicality',
-      instructors: 'Jacek & Ania',
+      name: 'Timba partnerwork',
+      instructors: 'Kevin & Geysa',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.B
   ),
   DanceClass(
       id: 19,
-      name: 'Reggeaton',
-      instructors: 'Regla',
-      difficulty: Difficulty.OPEN,
+      name: 'Salsa Funky',
+      instructors: 'Oliwka',
+      difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.C
   ),
   DanceClass(
       id: 20,
-      name: 'Despelote',
+      name: 'Changui',
       instructors: 'Eryk',
       difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.D
@@ -457,8 +457,8 @@ const List<DanceClass> DANCE_CLASSES = [
   ),
   DanceClass(
       id: 39,
-      name: 'Salsa funky',
-      instructors: 'Oliwka',
+      name: 'Ellegua',
+      instructors: 'Ania',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.C
   ),
@@ -520,7 +520,7 @@ const List<DanceClass> DANCE_CLASSES = [
   ),
   DanceClass(
       id: 48,
-      name: 'Changui',
+      name: 'Despelote',
       instructors: 'Eryk',
       difficulty: Difficulty.INTERMEDIATE,
       classRoom: ClassRoom.D
@@ -548,15 +548,15 @@ const List<DanceClass> DANCE_CLASSES = [
   ),
   DanceClass(
       id: 52,
-      name: 'Mozambique',
-      instructors: 'Regla',
+      name: 'Afrohouse',
+      instructors: 'Laura',
       difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.A
   ),
   DanceClass(
       id: 53,
-      name: 'Afrohouse',
-      instructors: 'Laura',
+      name: 'Mozambique',
+      instructors: 'Regla',
       difficulty: Difficulty.OPEN,
       classRoom: ClassRoom.A
   ),
